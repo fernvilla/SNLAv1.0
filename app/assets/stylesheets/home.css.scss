@@ -1,3 +1,37 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Signika);
+
+* {
+  border-radius: 0 !important;
+}
+
+#title {
+  font-size: 22px;
+  font-family: 'Signika', sans-serif;
+  color: #FFF;
+  text-shadow: 2px 2px 2px #000;
+  padding-left: 30px;
+  /*padding-right: 10px;*/
+}
+
+.navbar.navbar-inverse {
+  background: #161d42;
+  /*background-image: -moz-linear-gradient(top,  #000044 0%, #000061 100%);
+  background-image: -webkit-gradient(linear, left top, left bottombottom, color-stop(0%,#000044), color-stop(100%,#000061));
+  background-image: -webkit-linear-gradient(top,  #000044 0%, #000061 100%);
+  background-image: -o-linear-gradient(top,  #000044 0%,#000061 100%); 
+  background-image: -ms-linear-gradient(top,  #000044 0%,#000061 100%); */
+  border: none;
+}
+
+.navbar .nav > li > a {
+  color:  #d6d6d6;
+}
+
+.navbar .nav > li > a:hover {
+  color:  #FFF;
+}

@@ -7,7 +7,48 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="title">Sports News L.A.</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Lakers</a></li>
+          <li><a href="#">Clippers</a></li>
+          <li><a href="#">Dodgers</a></li>
+          <li><a href="#">Kings</a></li>
+          <li><a href="#">Sparks</a></li>
+          <li><a href="#">UCLA</a></li>
+          <li><a href="#">USC</a></li>
+          <li><a href="#">Galaxy</a></li>
+          <li><a href="#">Chivas USA</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li><a href="#">Fan Gear</a></li>
+          <li><a href="#">Tickets</a></li>
+          <li><a href="#">Sports Bars</a></li>
+          <li><a>|</a></li> -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In/Sign Up<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Favorites Dashboard</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <%= yield %>
 
 </body>

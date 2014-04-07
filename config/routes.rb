@@ -1,4 +1,10 @@
 SportsNewsLA::Application.routes.draw do
+  resources :chivas
+
+  resources :galaxies
+
+  resources :sparks
+
   resources :trojans
 
   resources :bruins
@@ -13,6 +19,9 @@ SportsNewsLA::Application.routes.draw do
     get "/kings(.:format)" => "kings#index"
     get "/bruins(.:format)" => "bruins#index"
     get "/trojans(.:format)" => "trojans#index"
+    get "/sparks(.:format)" => "sparks#index"
+    get "/galaxies(.:format)" => "galaxies#index"
+    get "/chivas(.:format)" => "chivas#index"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

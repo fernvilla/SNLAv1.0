@@ -11,12 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140407044954) do
+ActiveRecord::Schema.define(version: 20140407054735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bruins", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "url"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chivas", force: true do |t|
     t.string   "title"
     t.string   "author"
     t.text     "summary"
@@ -49,6 +60,17 @@ ActiveRecord::Schema.define(version: 20140407044954) do
     t.datetime "updated_at"
   end
 
+  create_table "galaxies", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "url"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "kings", force: true do |t|
     t.string   "title"
     t.string   "author"
@@ -61,6 +83,17 @@ ActiveRecord::Schema.define(version: 20140407044954) do
   end
 
   create_table "lakers", force: true do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "summary"
+    t.datetime "published"
+    t.string   "url"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sparks", force: true do |t|
     t.string   "title"
     t.string   "author"
     t.text     "summary"

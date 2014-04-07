@@ -1,6 +1,4 @@
 SportsNewsLA::Application.routes.draw do
-  resources :lakers
-
   root "home#index"
 
   

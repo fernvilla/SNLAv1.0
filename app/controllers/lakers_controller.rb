@@ -1,0 +1,2 @@
+class LakersController < ApplicationController
+end

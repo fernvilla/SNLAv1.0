@@ -9,7 +9,7 @@ class EspnImporter
       summary = entry.summary.gsub(/<a.*?<\/a>/, '')
 
       Laker.where(url: entry.url).first_or_create(
-        title:      entry.tile,
+        title:      entry.title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,

@@ -9,5 +9,6 @@ namespace :espn_sync do
     puts "There are now #{Dodger.count} Dodgers stories."
     puts "There are now #{Clipper.count} Clippers stories."
     puts "There are now #{King.count} Kings stories."
+    puts "There are now #{Bruin.count} Bruins stories."
   end
 end

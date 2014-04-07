@@ -7,6 +7,7 @@ class EspnImporter
     dodgers_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesdodger-report")
     clippers_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesclippers")
     kings_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angeleskings")
+    bruins_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesucla")
 
     lakers_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<a.*?<\/a>/, '')
@@ -47,6 +48,18 @@ class EspnImporter
     kings_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<a.*?<\/a>/, '')
       King.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    bruins_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      Bruin.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,

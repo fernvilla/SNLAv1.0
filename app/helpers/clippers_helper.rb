@@ -1,0 +1,2 @@
+module ClippersHelper
+end

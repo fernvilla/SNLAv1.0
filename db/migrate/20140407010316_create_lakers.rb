@@ -4,7 +4,7 @@ class CreateLakers < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.text :summary
-      t.timedate :published
+      t.datetime :published
       t.string :url
       t.string :source
 

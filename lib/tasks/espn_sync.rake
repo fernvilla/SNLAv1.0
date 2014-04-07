@@ -4,9 +4,10 @@ namespace :espn_sync do
   desc 'sync new stories from ESPN.com'
   task :espn => :environment do
     total = EspnImporter.import_espn
-    puts "There are now #{total.count} stories from ESPN.com."
-    puts "#{Laker.count} are Lakers stories."
-    puts "#{Dodger.count} are Dodgers stories."
-    puts "#{Clipper.count} are Clippers stories."
+
+    puts "There are now #{Laker.count} Lakers stories."
+    puts "There are now #{Dodger.count} Dodgers stories."
+    puts "There are now #{Clipper.count} Clippers stories."
+    puts "There are now #{King.count} Kings stories."
   end
 end

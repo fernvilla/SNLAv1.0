@@ -1,9 +1,12 @@
 SportsNewsLA::Application.routes.draw do
+  resources :kings
+
   root "home#index"
   scope :api do
     get "/lakers(.:format)" => "lakers#index"
     get "/dodgers(.:format)" => "dodgers#index"
     get "/clippers(.format)" => "clippers#index"
+    get "/kings(.:format)" => "kings#index"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,6 +4,7 @@
 
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Signika);
+$font: 'Signika', sans-serif;
 
 * {
   border-radius: 0 !important;
@@ -11,11 +12,10 @@
 
 #title {
   font-size: 22px;
-  font-family: 'Signika', sans-serif;
-  color: #FFF;
+  font-family: $font;
+  color: #fff;
   text-shadow: 2px 2px 2px #000;
   padding-left: 30px;
-  /*padding-right: 10px;*/
 }
 
 .navbar.navbar-inverse {
@@ -29,9 +29,9 @@
 }
 
 .navbar .nav > li > a {
-  color:  #d6d6d6;
-}
+  color:  #e6e6e6;
 
-.navbar .nav > li > a:hover {
-  color:  #FFF;
+  &:hover {
+    color: #fff;
+  }
 }

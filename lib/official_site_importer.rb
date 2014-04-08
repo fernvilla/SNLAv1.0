@@ -68,9 +68,11 @@ class OfficialSiteImporter
     end
 
     chivas_feed.entries.each do |entry|
-      # summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      # Remove everything after the | in title
+      title = entry.title.gsub(/\|.*$/, '')
+
       Chiva.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    entry.summary,
         published:  entry.published,

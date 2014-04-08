@@ -1,86 +1,104 @@
 <div class="container" id="main">
   <div class="row">
-    <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Lakers</h4>
-        <div ng-repeat="story in stories | limitTo: 10 ">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Clippers</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="DodgersCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="DodgersCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Dodgers</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div ng-controller="BruinsCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="BruinsCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">UCLA</h4>
-        <div ng-repeat="story in stories | limitTo: 10 ">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10 ">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="TrojansCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="TrojansCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">USC</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="KingsCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="KingsCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Kings</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Galaxy</h4>
-        <div ng-repeat="story in stories | limitTo: 10 ">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Chivas</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>
 
-    <div ng-controller="SparksCtrl" class="col-xs-12 col-sm-6 col-md-4" class="team">
+    <div ng-controller="SparksCtrl" class="col-xs-12 col-sm-6 col-md-4">
       <div>
       <h4 class="team-header">Sparks</h4>
-        <div ng-repeat="story in stories | limitTo: 10">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
         </div>
       </div>
     </div>

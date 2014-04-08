@@ -1,0 +1,1 @@
+App = angular.module('SportsNewsLA', ['ngResource'])

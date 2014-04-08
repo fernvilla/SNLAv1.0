@@ -1,18 +1,8 @@
 <div ng-controller="LakersCtrl">
   <div>
     <ul>
-      <li ng-repeat="story in stories">
-        <h6><a href="{{story.url}}">{{story.title}}</a></h6>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<div ng-controller="ClippersCtrl">
-  <div>
-    <ul>
-      <li ng-repeat="story in stories">
-        <h6><a href="{{story.url}}">{{story.title}}</a></h6>
+      <li ng-repeat="story in stories | limitTo: 10">
+        <h6><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</h6>
       </li>
     </ul>
   </div>

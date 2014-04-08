@@ -1,9 +1,88 @@
-<div ng-controller="LakersCtrl">
-  <div>
-    <ul>
-      <li ng-repeat="story in stories | limitTo: 10">
-        <h6><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</h6>
-      </li>
-    </ul>
+<div class="container">
+  <div class="row">
+    <div ng-controller="LakersCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Lakers</h4>
+        <div ng-repeat="story in stories | limitTo: 10 ">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="ClippersCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Clippers</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="DodgersCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Dodgers</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-controller="BruinsCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">UCLA</h4>
+        <div ng-repeat="story in stories | limitTo: 10 ">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="TrojansCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">USC</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="KingsCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Kings</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div ng-controller="GalaxyCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Galaxy</h4>
+        <div ng-repeat="story in stories | limitTo: 10 ">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="ChivasCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Chivas</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="SparksCtrl" class="col-md-4" class="team">
+      <div>
+      <h4 class="team-header">Sparks</h4>
+        <div ng-repeat="story in stories | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a> ({{story.published | date: 'mediumDate'}})</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

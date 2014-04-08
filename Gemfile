@@ -20,6 +20,7 @@ gem 'omniauth-google'
 
 # AngularJS
 gem 'angularjs-rails'
+gem 'ngmin-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

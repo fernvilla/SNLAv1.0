@@ -1,1 +1,1 @@
-App = angular.module('SportsNewsLA', ['ngResource'])
+App = angular.module('SportsNewsLA', ['ngResource']);

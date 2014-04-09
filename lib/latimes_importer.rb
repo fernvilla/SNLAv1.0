@@ -11,6 +11,7 @@ class LATimesImporter
     kings_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/hockey/nhl/kings/rss2.0.xml")
     trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/college/usc/rss2.0.xml")
     bruins_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/college/ucla/rss2.0.xml")
+    sparks_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/rss/topic/sports/basketball/los-angeles-sparks-ORSPT000448.topic")
 
     lakers_feed.entries.each do |entry|
       Laker.where(url: entry.url).first_or_create(
@@ -91,6 +92,17 @@ class LATimesImporter
 
     bruins_feed.entries.each do |entry|
       Bruin.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    sparks_feed.entries.each do |entry|
+      Spark.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    entry.summary,

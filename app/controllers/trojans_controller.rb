@@ -1,5 +1,9 @@
 class TrojansController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Trojan.all
   end
 

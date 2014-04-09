@@ -1,5 +1,9 @@
 class ChivasController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Chiva.all
   end
 

@@ -1,5 +1,9 @@
 class GalaxiesController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Galaxy.all
   end
 

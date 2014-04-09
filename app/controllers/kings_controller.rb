@@ -1,5 +1,9 @@
 class KingsController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: King.all
   end
 

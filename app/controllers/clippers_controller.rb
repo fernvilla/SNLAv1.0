@@ -1,5 +1,9 @@
 class ClippersController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Clipper.all
   end
 

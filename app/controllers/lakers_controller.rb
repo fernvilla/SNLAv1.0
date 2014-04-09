@@ -1,5 +1,9 @@
 class LakersController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Laker.all
   end
 

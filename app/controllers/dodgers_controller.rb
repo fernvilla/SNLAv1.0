@@ -1,5 +1,9 @@
 class DodgersController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Dodger.all
   end
 

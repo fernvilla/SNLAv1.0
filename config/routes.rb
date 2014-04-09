@@ -1,17 +1,27 @@
 SportsNewsLA::Application.routes.draw do
   root "home#index"
+  get "bruins" => "bruins#index"
+  get "/lakers" => "lakers#index"
+  get "/dodgers" => "dodgers#index"
+  get "/clippers" => "clippers#index"
+  get "/kings" => "kings#index"
+  get "/trojans" => "trojans#index"
+  get "/sparks" => "sparks#index"
+  get "/galaxies" => "galaxies#index"
+  get "/chivas" => "chivas#index"
+
   scope :api do
     # Routes to all stories
-    get "/lakers(.:format)" => "lakers#index"
-    get "/dodgers(.:format)" => "dodgers#index"
-    get "/clippers(.format)" => "clippers#index"
-    get "/kings(.:format)" => "kings#index"
-    get "/bruins(.:format)" => "bruins#index"
-    get "/trojans(.:format)" => "trojans#index"
-    get "/sparks(.:format)" => "sparks#index"
-    get "/galaxies(.:format)" => "galaxies#index"
-    get "/chivas(.:format)" => "chivas#index"
-
+    get "/lakers(.:format)" => "lakers#api"
+    get "/dodgers(.:format)" => "dodgers#api"
+    get "/clippers(.format)" => "clippers#api"
+    get "/kings(.:format)" => "kings#api"
+    get "/bruins(.:format)" => "bruins#api"
+    get "/trojans(.:format)" => "trojans#api"
+    get "/sparks(.:format)" => "sparks#api"
+    get "/galaxies(.:format)" => "galaxies#api"
+    get "/chivas(.:format)" => "chivas#api"
+ 
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"
     get "/clippers/official(.:format)" => "clippers#official"
@@ -28,5 +38,6 @@ SportsNewsLA::Application.routes.draw do
     get "/kings/latimes(.:format)" => "kings#latimes"
     get "/trojans/latimes(.:format)" => "trojans#latimes"
     get "/bruins/latimes(.:format)" => "bruins#latimes"
+    get "/sparks/latimes(.:format)" => "sparks#latimes"
   end
 end

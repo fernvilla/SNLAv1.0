@@ -1,5 +1,9 @@
 class BruinsController < ApplicationController
   def index
+    
+  end
+
+  def api
     render json: Bruin.all
   end
 

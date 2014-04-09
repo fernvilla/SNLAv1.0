@@ -18,19 +18,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#" id="title">Sports News L.A.</a>
+        <%= link_to "Sports News L.A.", root_path, class: "navbar-brand", id: "title"%>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Lakers</a></li>
-          <li><a href="#">Clippers</a></li>
-          <li><a href="#">Dodgers</a></li>
-          <li><a href="#">Kings</a></li>
-          <li><a href="#">Sparks</a></li>
-          <li><a href="#">UCLA</a></li>
-          <li><a href="#">USC</a></li>
-          <li><a href="#">Galaxy</a></li>
-          <li><a href="#">Chivas USA</a></li>
+          <li><%= link_to "Lakers", lakers_path %></li>
+          <li><%= link_to "Clippers", clippers_path %></li>
+          <li><%= link_to "Dodgers", dodgers_path %></li>
+          <li><%= link_to "Kings", kings_path %></li>
+          <li><%= link_to "UCLA", bruins_path %></li>
+          <li><%= link_to "USC", trojans_path %></li>
+          <li><%= link_to "Sparks", sparks_path %></li>
+          <li><%= link_to "Galaxy", galaxies_path %></li>
+          <li><%= link_to "Chivas USA", chivas_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <!-- <li><a href="#">Fan Gear</a></li>

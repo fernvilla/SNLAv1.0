@@ -1,5 +1,6 @@
 SportsNewsLA::Application.routes.draw do
   root "home#index"
+
   get "bruins" => "bruins#index"
   get "/lakers" => "lakers#index"
   get "/dodgers" => "dodgers#index"
@@ -9,6 +10,8 @@ SportsNewsLA::Application.routes.draw do
   get "/sparks" => "sparks#index"
   get "/galaxies" => "galaxies#index"
   get "/chivas" => "chivas#index"
+  get "/angels" => "angels#index"
+  get "/ducks" => "ducks#index"
 
   scope :api do
     # Routes to all stories
@@ -21,6 +24,8 @@ SportsNewsLA::Application.routes.draw do
     get "/sparks(.:format)" => "sparks#api"
     get "/galaxies(.:format)" => "galaxies#api"
     get "/chivas(.:format)" => "chivas#api"
+    get "/angels(.:format)" => "angels#api"
+    get "/ducks(.:format)" => "ducks#api"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

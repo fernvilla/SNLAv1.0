@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Lakers</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Clippers</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
@@ -22,12 +22,23 @@
       </div>
     </div>
 
-    <div ng-controller="DodgersCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="DodgersCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Dodgers</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
           <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
             <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="AngelsCtrl" class="col-xs-12 col-sm-6 col-md-3">
+      <div>
+        <p class="team-header">Angels</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}}) test</span>
           </p>
         </div>
       </div>

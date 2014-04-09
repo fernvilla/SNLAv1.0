@@ -46,7 +46,7 @@
   </div>
 
   <div class="row">
-    <div ng-controller="BruinsCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="BruinsCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">UCLA</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10 ">
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div ng-controller="TrojansCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="TrojansCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">USC</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
@@ -68,9 +68,20 @@
       </div>
     </div>
 
-    <div ng-controller="KingsCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="KingsCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Kings</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="DucksCtrl" class="col-xs-12 col-sm-6 col-md-3">
+      <div>
+        <p class="team-header">Ducks</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
           <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
             <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
@@ -81,7 +92,7 @@
   </div>
 
   <div class="row">
-    <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Galaxy</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
@@ -92,7 +103,7 @@
       </div>
     </div>
 
-    <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Chivas</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
@@ -103,9 +114,20 @@
       </div>
     </div>
 
-    <div ng-controller="SparksCtrl" class="col-xs-12 col-sm-6 col-md-4">
+    <div ng-controller="SparksCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div>
         <p class="team-header">Sparks</p>
+        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
+          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="PrepsCtrl" class="col-xs-12 col-sm-6 col-md-3">
+      <div>
+        <p class="team-header">High-School</p>
         <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
           <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
             <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>

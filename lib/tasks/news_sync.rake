@@ -18,5 +18,7 @@ namespace :news_sync do
     puts "There are now #{Galaxy.count} Galaxy stories."
     puts "There are now #{Spark.count} Sparks stories."
     puts "There are now #{Chiva.count} Chivas stories."
+    puts "There are now #{Ducks.count} Ducks stories."
+    puts "There are now #{Angel.count} Angels stories."
   end
 end

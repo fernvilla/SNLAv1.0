@@ -6,4 +6,8 @@ class KingsController < ApplicationController
   def official
     render json: King.where(source: "Official Site")
   end
+
+  def latimes
+    render json: King.where(source: "LA Times")
+  end
 end

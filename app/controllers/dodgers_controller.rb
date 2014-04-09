@@ -6,4 +6,8 @@ class DodgersController < ApplicationController
   def official
     render json: Dodger.where(source: "Official Site")
   end
+
+  def latimes
+    render json: Dodger.where(source: "LA Times")
+  end
 end

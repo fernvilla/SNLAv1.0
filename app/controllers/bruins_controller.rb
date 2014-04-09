@@ -6,4 +6,8 @@ class BruinsController < ApplicationController
   def official
     render json: Bruin.where(source: "Official Site")
   end
+
+  def latimes
+    render json: Bruin.where(source: "LA Times")
+  end
 end

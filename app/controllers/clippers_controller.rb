@@ -6,4 +6,8 @@ class ClippersController < ApplicationController
   def official
     render json: Clipper.where(source: "Official Site")
   end
+
+  def latimes
+    render json: Clipper.where(source: "LA Times")
+  end
 end

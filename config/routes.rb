@@ -19,6 +19,14 @@ SportsNewsLA::Application.routes.draw do
     get "/kings/official(.:format)" => "kings#official"
     get "/galaxies/official(.:format)" => "galaxies#official"
     get "/chivas/official(.:format)" => "chivas#official"  
-    get "/bruins/official(.:format)" => "bruins#official"  
+    get "/bruins/official(.:format)" => "bruins#official" 
+
+    # Routes to stories from LA Times
+    get "/lakers/latimes(.:format)" => "lakers#latimes"
+    get "/clippers/latimes(.:format)" => "clippers#latimes"
+    get "/dodgers/latimes(.:format)" => "dodgers#latimes"
+    get "/kings/latimes(.:format)" => "kings#latimes"
+    get "/trojans/latimes(.:format)" => "trojans#latimes"
+    get "/bruins/latimes(.:format)" => "bruins#latimes"
   end
 end

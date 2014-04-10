@@ -1,1 +1,9 @@
-<h1>Chivas</h1>
+<div class="container">
+  <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-6">
+    <div ng-repeat="story in stories | orderBy: '-published'">
+      <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+        <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,138 +1,114 @@
 <div class="container">
   <div class="row">
     <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Lakers</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Lakers", lakers_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Clippers</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Clippers", clippers_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="DodgersCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Dodgers</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Dodgers", dodgers_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="AngelsCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Angels</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}}) test</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Angels", angels_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div ng-controller="BruinsCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">UCLA</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5 ">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "UCLA", bruins_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5 ">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="TrojansCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">USC</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "USC", trojans_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="KingsCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Kings</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Kings", kings_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="DucksCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Ducks</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Ducks", ducks_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
   </div>
 
   <div class="row">
     <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Galaxy</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Galaxy", galaxies_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="ChivasCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Chivas</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Chivas", chivas_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="SparksCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">Sparks</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "Sparks", sparks_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
 
     <div ng-controller="PrepsCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div>
-        <p class="team-header">High-School</p>
-        <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
-          <p><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
-            <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-          </p>
-        </div>
+      <div class="team-header"><%= link_to "High School", preps_path %></div>
+      <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 5">
+        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </p>
       </div>
     </div>
   </div>

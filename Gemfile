@@ -25,6 +25,7 @@ gem 'ngmin-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass'
+gem 'masonry-rails'
 
 # Heroku
 gem 'rails_12factor'

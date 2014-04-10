@@ -37,6 +37,7 @@ SportsNewsLA::Application.routes.draw do
     get "/galaxies/official(.:format)" => "galaxies#official"
     get "/chivas/official(.:format)" => "chivas#official"  
     get "/bruins/official(.:format)" => "bruins#official" 
+    get "/ducks/official(.:format)" => "ducks#official" 
 
     # Routes to stories from LA Times
     get "/lakers/latimes(.:format)" => "lakers#latimes"
@@ -46,5 +47,6 @@ SportsNewsLA::Application.routes.draw do
     get "/trojans/latimes(.:format)" => "trojans#latimes"
     get "/bruins/latimes(.:format)" => "bruins#latimes"
     get "/sparks/latimes(.:format)" => "sparks#latimes"
+    get "/preps/latimes(.:format)" => "preps#latimes"
   end
 end

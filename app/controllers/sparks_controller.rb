@@ -10,4 +10,8 @@ class SparksController < ApplicationController
   def latimes
     render json: Spark.where(source: "LA Times")
   end
+
+  def espn
+    render json: Spark.where(source: "ESPN")
+  end
 end

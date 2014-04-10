@@ -10,4 +10,8 @@ class ChivasController < ApplicationController
   def official
     render json: Chiva.where(source: "Official Site")
   end
+
+  def espn
+    render json: Chiva.where(source: "ESPN")
+  end
 end

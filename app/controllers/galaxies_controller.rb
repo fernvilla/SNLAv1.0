@@ -10,4 +10,8 @@ class GalaxiesController < ApplicationController
   def official
     render json: Galaxy.where(source: "Official Site")
   end
+
+  def espn
+    render json: Galaxy.where(source: "ESPN")
+  end
 end

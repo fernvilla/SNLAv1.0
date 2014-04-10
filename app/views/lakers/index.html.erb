@@ -1,6 +1,7 @@
 <div class="container">
+  <!-- Search Stories: <input ng-model="searchText"> -->
   <div ng-controller="LakersCtrl" class="col-xs-12 col-sm-6 col-md-6">
-    <div ng-repeat="story in stories | orderBy: '-published'">
+    <div ng-repeat="story in stories | orderBy:'-published' |filter:searchText">
       <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
         <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
       </p>

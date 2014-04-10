@@ -1,6 +1,7 @@
 SportsNewsLA::Application.routes.draw do
   root "home#index"
 
+  # Team index page routes
   get "bruins" => "bruins#index"
   get "lakers" => "lakers#index"
   get "dodgers" => "dodgers#index"
@@ -50,5 +51,18 @@ SportsNewsLA::Application.routes.draw do
     get "/sparks/latimes(.:format)" => "sparks#latimes"
     get "/preps/latimes(.:format)" => "preps#latimes"
     get "/angels/latimes(.:format)" => "angels#latimes"
+
+    # Routes to stories from ESPN
+    get "/lakers/espn(.:format)" => "lakers#espn"
+    get "/clippers/espn(.:format)" => "clippers#espn"
+    get "/dodgers/espn(.:format)" => "dodgers#espn"
+    get "/kings/espn(.:format)" => "kings#espn"
+    get "/trojans/espn(.:format)" => "trojans#espn"
+    get "/bruins/espn(.:format)" => "bruins#espn"
+    get "/sparks/espn(.:format)" => "sparks#espn"
+    get "/angels/espn(.:format)" => "angels#espn"
+    get "/chivas/espn(.:format)" => "chivas#espn"
+    get "/galaxies/espn(.:format)" => "galaxies#espn"
+    get "/ducks/espn(.:format)" => "ducks#espn"
   end
 end

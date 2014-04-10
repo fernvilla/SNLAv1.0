@@ -14,4 +14,8 @@ class AngelsController < ApplicationController
   def latimes
     render json: Angel.where(source: "LA Times")
   end
+
+  def espn
+    render json: Angel.where(source: "ESPN")
+  end
 end

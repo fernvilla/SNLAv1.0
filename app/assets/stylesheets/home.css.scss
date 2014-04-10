@@ -29,7 +29,7 @@ body {
   font-family: $font;
   color: #fff;
   text-shadow: 1px 1px 10px #000;
-  padding-left: 40px;
+  /*padding-left: 40px;*/
 }
 
 .navbar .nav > li > a {
@@ -50,6 +50,19 @@ a {
   &:visited {
     color: #939393;
   }
+}
+
+.headline {
+  border-top: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
+  color: $base-color;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container-fluid {
+  margin: 0 30px;
 }
 
 .team-header {
@@ -73,7 +86,7 @@ a {
 .story {
   font-size: 13px;
   border-bottom: 1px solid #e6e6e6;
-  padding: 0 1px;
+  padding: 2px;
   &:hover {
     background-color:#efefef;
     border-radius: 5px;

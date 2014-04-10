@@ -18,4 +18,8 @@ class BruinsController < ApplicationController
   def espn
     render json: Bruin.where(source: "ESPN")
   end
+
+  def ocregister
+    render json: Bruin.where(source: "OC Register")
+  end
 end

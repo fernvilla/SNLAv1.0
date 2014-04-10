@@ -1,21 +1,42 @@
 require 'feedjira'
 
-class OfficialSiteImporter
-  def self.import_official_news
-    source = "Official Site"
-    lakers_feed = Feedjira::Feed.fetch_and_parse("http://www.nba.com/lakers/rss.xml")
-    clippers_feed = Feedjira::Feed.fetch_and_parse("http://www.nba.com/clippers/rss.xml")
-    dodgers_feed = Feedjira::Feed.fetch_and_parse("http://losangeles.dodgers.mlb.com/partnerxml/gen/news/rss/la.xml")
-    kings_feed = Feedjira::Feed.fetch_and_parse("http://kings.nhl.com/rss/news.xml")
-    galaxy_feed = Feedjira::Feed.fetch_and_parse("http://www.lagalaxy.com/rss/en.xml")
-    chivas_feed = Feedjira::Feed.fetch_and_parse("http://www.cdchivasusa.com/rss/en.xml")
-    bruins_feed = Feedjira::Feed.fetch_and_parse("http://www.uclabruins.com/rss.dbml?db_oem_id=30500&media=news")
-    ducks_feed = Feedjira::Feed.fetch_and_parse("http://ducks.nhl.com/rss/news.xml")
-    angels_feed = Feedjira::Feed.fetch_and_parse("http://losangeles.angels.mlb.com/partnerxml/gen/news/rss/ana.xml")
-    trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.usctrojans.com/blog/atom.xml")
+class OCRegisterImporter
+  def self.import_oc_register
+    source = "OC Register"
+    preps_feed = Feedjira::Feed.fetch_and_parse("http://www.ocvarsity.com/common/rss/rss.php")
+    lakers_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18904")
+    angels_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18902")
+    clippers_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=19965")
+    dodgers_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18907")
+    ducks_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18903")
+    kings_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=19968")
+    bruins_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18906")
+    trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18905")
+
+    preps_feed.entries.each do |entry|
+      Prep.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
 
     lakers_feed.entries.each do |entry|
       Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    angels_feed.entries.each do |entry|
+      Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    entry.summary,
@@ -47,43 +68,6 @@ class OfficialSiteImporter
       )
     end
 
-    kings_feed.entries.each do |entry|
-      King.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    entry.summary,
-        published:  entry.published,
-        url:        entry.url,
-        source:     source
-      )
-    end
-
-    galaxy_feed.entries.each do |entry|
-      # summary = entry.summary.gsub(/<a.*?<\/a>/, '')
-      Galaxy.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    entry.summary,
-        published:  entry.published,
-        url:        entry.url,
-        source:     source
-      )
-    end
-
-    chivas_feed.entries.each do |entry|
-      # Remove everything after the | in title
-      title = entry.title.gsub(/\|.*$/, '')
-
-      Chiva.where(url: entry.url).first_or_create(
-        title:      title,
-        author:     entry.author,
-        summary:    entry.summary,
-        published:  entry.published,
-        url:        entry.url,
-        source:     source
-      )
-    end
-
     ducks_feed.entries.each do |entry|
       Duck.where(url: entry.url).first_or_create(
         title:      entry.title,
@@ -95,8 +79,19 @@ class OfficialSiteImporter
       )
     end
 
-    angels_feed.entries.each do |entry|
-      Angel.where(url: entry.url).first_or_create(
+    kings_feed.entries.each do |entry|
+      King.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    bruins_feed.entries.each do |entry|
+      Bruin.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    entry.summary,

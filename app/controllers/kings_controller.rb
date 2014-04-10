@@ -18,4 +18,8 @@ class KingsController < ApplicationController
   def espn
     render json: King.where(source: "ESPN")
   end
+
+  def ocregister
+    render json: King.where(source: "OC Register")
+  end
 end

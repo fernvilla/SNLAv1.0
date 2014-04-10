@@ -1,6 +1,7 @@
 require 'espn_importer'
 require 'official_site_importer'
 require 'latimes_importer'
+require 'ocregister_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -8,6 +9,7 @@ namespace :news_sync do
     EspnImporter.import_espn
     OfficialSiteImporter.import_official_news
     LATimesImporter.import_la_times
+    OCRegisterImporter.import_oc_register
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

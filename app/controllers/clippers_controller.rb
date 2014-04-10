@@ -18,4 +18,8 @@ class ClippersController < ApplicationController
   def espn
     render json: Clipper.where(source: "ESPN")
   end
+
+  def ocregister
+    render json: Clipper.where(source: "OC Register")
+  end
 end

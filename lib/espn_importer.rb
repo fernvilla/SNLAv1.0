@@ -133,7 +133,7 @@ class EspnImporter
 
     bruins_feed_two.entries.each do |entry|
       summary = entry.summary.gsub(/<a.*?<\/a>/, '')
-      Bruin.where(url: entry.url).first_or_create(
+      Bruin.where(title: entry.title).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,
@@ -157,7 +157,7 @@ class EspnImporter
 
     trojans_feed_two.entries.each do |entry|
       summary = entry.summary.gsub(/<a.*?<\/a>/, '')
-      Trojan.where(url: entry.url).first_or_create(
+      Trojan.where(title: entry.title).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,

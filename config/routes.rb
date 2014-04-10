@@ -40,6 +40,7 @@ SportsNewsLA::Application.routes.draw do
     get "/bruins/official(.:format)" => "bruins#official" 
     get "/ducks/official(.:format)" => "ducks#official" 
     get "/angels/official(.:format)" => "angels#official" 
+    get "/trojans/official(.:format)" => "trojans#official" 
 
     # Routes to stories from LA Times
     get "/lakers/latimes(.:format)" => "lakers#latimes"
@@ -64,5 +65,16 @@ SportsNewsLA::Application.routes.draw do
     get "/chivas/espn(.:format)" => "chivas#espn"
     get "/galaxies/espn(.:format)" => "galaxies#espn"
     get "/ducks/espn(.:format)" => "ducks#espn"
+
+    # Routes to stories from OC Register
+    get "/preps/ocregister(.:format)" => "preps#ocregister"
+    get "/lakers/ocregister(.:format)" => "lakers#ocregister"
+    get "/angels/ocregister(.:format)" => "angels#ocregister"
+    get "/clippers/ocregister(.:format)" => "clippers#ocregister"
+    get "/dodgers/ocregister(.:format)" => "dodgers#ocregister"
+    get "/ducks/ocregister(.:format)" => "ducks#ocregister"
+    get "/kings/ocregister(.:format)" => "kings#ocregister"
+    get "/bruins/ocregister(.:format)" => "bruins#ocregister"
+    get "/trojans/ocregister(.:format)" => "trojans#ocregister"
   end
 end

@@ -18,4 +18,8 @@ class AngelsController < ApplicationController
   def espn
     render json: Angel.where(source: "ESPN")
   end
+
+  def ocregister
+    render json: Angel.where(source: "OC Register")
+  end
 end

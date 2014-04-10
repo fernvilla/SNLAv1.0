@@ -18,4 +18,8 @@ class LakersController < ApplicationController
   def espn
     render json: Laker.where(source: "ESPN")
   end
+
+  def ocregister
+    render json: Laker.where(source: "OC Register")
+  end
 end

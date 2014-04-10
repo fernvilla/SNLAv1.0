@@ -14,10 +14,11 @@ class OCRegisterImporter
     trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.ocregister.com/common/rss/rss.php?catID=18905")
 
     preps_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Prep.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -25,10 +26,11 @@ class OCRegisterImporter
     end
 
     lakers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -36,10 +38,11 @@ class OCRegisterImporter
     end
 
     angels_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -47,10 +50,11 @@ class OCRegisterImporter
     end
 
     clippers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Clipper.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -58,10 +62,11 @@ class OCRegisterImporter
     end
 
     dodgers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Dodger.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -69,10 +74,11 @@ class OCRegisterImporter
     end
 
     ducks_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Duck.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -80,10 +86,11 @@ class OCRegisterImporter
     end
 
     kings_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       King.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -91,10 +98,11 @@ class OCRegisterImporter
     end
 
     bruins_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Bruin.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -102,10 +110,11 @@ class OCRegisterImporter
     end
 
     trojans_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Trojan.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source

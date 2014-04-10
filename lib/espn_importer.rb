@@ -24,7 +24,7 @@ class EspnImporter
     chivas_feed = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/chivas-usa/")
 
     lakers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -36,9 +36,10 @@ class EspnImporter
     end
 
     lakers_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -48,7 +49,7 @@ class EspnImporter
     end
 
     dodgers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Dodger.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -60,9 +61,10 @@ class EspnImporter
     end
 
     dodgers_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Dodger.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -72,7 +74,7 @@ class EspnImporter
     end
 
     clippers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Clipper.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -84,9 +86,10 @@ class EspnImporter
     end
 
     clippers_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Clipper.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -96,7 +99,7 @@ class EspnImporter
     end
 
     kings_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       King.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -108,9 +111,10 @@ class EspnImporter
     end
 
     kings_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       King.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -120,7 +124,7 @@ class EspnImporter
     end
 
     bruins_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Bruin.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -132,9 +136,10 @@ class EspnImporter
     end
 
     bruins_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Bruin.where(title: entry.title).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -144,7 +149,7 @@ class EspnImporter
     end
 
     trojans_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Trojan.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -156,9 +161,10 @@ class EspnImporter
     end
 
     trojans_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Trojan.where(title: entry.title).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -168,7 +174,7 @@ class EspnImporter
     end
 
     angels_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -180,9 +186,10 @@ class EspnImporter
     end
 
     angels_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Angel.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -192,7 +199,7 @@ class EspnImporter
     end
 
     ducks_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Duck.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -204,9 +211,10 @@ class EspnImporter
     end
 
     ducks_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      title = entry.title.gsub(/#x26;/, '')
       Duck.where(url: entry.url).first_or_create(
-        title:      entry.title,
+        title:      title,
         author:     entry.author,
         summary:    summary,
         published:  entry.published,
@@ -216,7 +224,7 @@ class EspnImporter
     end
 
     sparks_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Spark.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -228,7 +236,7 @@ class EspnImporter
     end
 
     galaxy_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Galaxy.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
@@ -240,7 +248,7 @@ class EspnImporter
     end
 
     chivas_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Chiva.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,

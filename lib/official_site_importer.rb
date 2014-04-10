@@ -15,10 +15,11 @@ class OfficialSiteImporter
     trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.usctrojans.com/blog/atom.xml")
 
     lakers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -26,10 +27,11 @@ class OfficialSiteImporter
     end
 
     clippers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Clipper.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -37,10 +39,11 @@ class OfficialSiteImporter
     end
 
     dodgers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Dodger.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -48,10 +51,11 @@ class OfficialSiteImporter
     end
 
     kings_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       King.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -59,11 +63,11 @@ class OfficialSiteImporter
     end
 
     galaxy_feed.entries.each do |entry|
-      # summary = entry.summary.gsub(/<a.*?<\/a>/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Galaxy.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -71,13 +75,13 @@ class OfficialSiteImporter
     end
 
     chivas_feed.entries.each do |entry|
-      # Remove everything after the | in title
       title = entry.title.gsub(/\|.*$/, '')
+      summary = entry.summary.gsub(/<[^>]*>/, '')
 
       Chiva.where(url: entry.url).first_or_create(
         title:      title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -85,10 +89,11 @@ class OfficialSiteImporter
     end
 
     ducks_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Duck.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -96,10 +101,11 @@ class OfficialSiteImporter
     end
 
     angels_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -107,10 +113,11 @@ class OfficialSiteImporter
     end
 
     trojans_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Trojan.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source

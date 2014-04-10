@@ -16,10 +16,11 @@ class LATimesImporter
     angels_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/baseball/mlb/angels/rss2.0.xml")
 
     lakers_feed.entries.each do |entry|
+    summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -27,10 +28,11 @@ class LATimesImporter
     end
 
     lakers_feed_two.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -38,10 +40,11 @@ class LATimesImporter
     end
 
     clippers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Clipper.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -49,10 +52,11 @@ class LATimesImporter
     end
 
     dodgers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Dodger.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -60,10 +64,11 @@ class LATimesImporter
     end
 
     dodgers_feed_two.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Dodger.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -71,10 +76,11 @@ class LATimesImporter
     end
 
     kings_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       King.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -82,10 +88,11 @@ class LATimesImporter
     end
 
     trojans_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Trojan.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -93,10 +100,11 @@ class LATimesImporter
     end
 
     bruins_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Bruin.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -104,10 +112,11 @@ class LATimesImporter
     end
 
     sparks_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Spark.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -115,10 +124,11 @@ class LATimesImporter
     end
 
     preps_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Prep.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source
@@ -126,10 +136,11 @@ class LATimesImporter
     end
 
     angels_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
       Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    entry.summary,
+        summary:    summary,
         published:  entry.published,
         url:        entry.url,
         source:     source

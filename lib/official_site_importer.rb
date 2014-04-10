@@ -11,6 +11,7 @@ class OfficialSiteImporter
     chivas_feed = Feedjira::Feed.fetch_and_parse("http://www.cdchivasusa.com/rss/en.xml")
     bruins_feed = Feedjira::Feed.fetch_and_parse("http://www.uclabruins.com/rss.dbml?db_oem_id=30500&media=news")
     ducks_feed = Feedjira::Feed.fetch_and_parse("http://ducks.nhl.com/rss/news.xml")
+    angels_feed = Feedjira::Feed.fetch_and_parse("http://losangeles.angels.mlb.com/partnerxml/gen/news/rss/ana.xml")
 
     lakers_feed.entries.each do |entry|
       Laker.where(url: entry.url).first_or_create(
@@ -84,6 +85,17 @@ class OfficialSiteImporter
 
     ducks_feed.entries.each do |entry|
       Duck.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    angels_feed.entries.each do |entry|
+      Angel.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    entry.summary,

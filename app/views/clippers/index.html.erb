@@ -1,18 +1,22 @@
-<div class="container" ng-controller="ClippersCtrl" >
+<div class="container-fluid" ng-controller="ClippersCtrl" >
   <div class="row">
-    <!-- Search Stories: <input ng-model="searchText"> -->
-    <div class="col-xs-12 col-sm-6 col-md-6">
-      <div ng-repeat="story in stories | orderBy:'-published' |filter:searchText">
-        <p class="story"><a href="{{story.url}}" target="blank">{{story.title}}</a><br>
+    <div class=" col-sm-5 col-md-5">
+      Search Stories: <input ng-model="searchStory"><br><br>
+      <div ng-repeat="story in stories | orderBy:'-published' |filter:searchStory">
+        <p class="story">
+          <a href="{{story.url}}" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </p>
       </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6">
-      <div ng-repeat="tweet in tweets | orderBy:'created_at'">
-        <p class="tweet"><a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a><br>
-          <span class="tweet-time">({{tweet.created_at}})</span>
+    <div class="col-sm-7 col-md-7">
+      Search Tweets: <input ng-model="searchTweet"><br><br>
+      <div ng-repeat="tweet in tweets |  filter: searchTweet">
+        <p class="tweet">
+          <img class="tweet-img" src="{{tweet.user.profile_image_url}}" alt="">
+          <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a><br>
+          <span class="source">({{tweet.created_at}})</span>
         </p>
       </div>
     </div>

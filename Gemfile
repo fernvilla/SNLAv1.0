@@ -29,6 +29,7 @@ gem 'ngmin-rails'
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'masonry-rails'
 
 # Heroku
 gem 'rails_12factor'

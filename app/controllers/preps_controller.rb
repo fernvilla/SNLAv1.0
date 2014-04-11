@@ -3,6 +3,10 @@ class PrepsController < ApplicationController
     
   end
 
+  def twitter
+    render json: "blank"
+  end
+
   def api
     render json: Prep.all
   end

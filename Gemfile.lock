@@ -85,6 +85,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    masonry-rails (0.2.1)
+      rails
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     method_source (0.8.2)
@@ -230,6 +232,7 @@ DEPENDENCIES
   figaro
   font-awesome-rails
   jquery-rails
+  masonry-rails
   ngmin-rails
   omniauth
   omniauth-facebook

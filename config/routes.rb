@@ -42,6 +42,7 @@ SportsNewsLA::Application.routes.draw do
     get "/galaxies/twitter(.:format)" => "galaxies#twitter"
     get "/chivas/twitter(.:format)" => "chivas#twitter"
     get "/sparks/twitter(.:format)" => "sparks#twitter"
+    get "/preps/twitter(.:format)" => "preps#twitter"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

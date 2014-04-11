@@ -22,4 +22,8 @@ class ClippersController < ApplicationController
   def ocregister
     render json: Clipper.where(source: "OC Register")
   end
+
+  def dailynews
+    render json: Clipper.where(source: "Daily News")
+  end
 end

@@ -22,4 +22,8 @@ class AngelsController < ApplicationController
   def ocregister
     render json: Angel.where(source: "OC Register")
   end
+
+  def dailynews
+    render json: Angel.where(source: "Daily News")
+  end
 end

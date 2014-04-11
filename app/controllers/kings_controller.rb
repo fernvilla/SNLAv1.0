@@ -22,4 +22,8 @@ class KingsController < ApplicationController
   def ocregister
     render json: King.where(source: "OC Register")
   end
+
+  def dailynews
+    render json: King.where(source: "Daily News")
+  end
 end

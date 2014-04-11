@@ -14,4 +14,8 @@ class PrepsController < ApplicationController
   def ocregister
     render json: Prep.where(source: "OC Register")
   end
+
+  def dailynews
+    render json: Prep.where(source: "Daily News")
+  end
 end

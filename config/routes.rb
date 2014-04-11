@@ -76,5 +76,14 @@ SportsNewsLA::Application.routes.draw do
     get "/kings/ocregister(.:format)" => "kings#ocregister"
     get "/bruins/ocregister(.:format)" => "bruins#ocregister"
     get "/trojans/ocregister(.:format)" => "trojans#ocregister"
+
+    # Routes to stories from Daily News
+    get "/angels/dailynews(.:format)" => "angels#dailynews"
+    get "/clippers/dailynews(.:format)" => "clippers#dailynews"
+    get "/dodgers/dailynews(.:format)" => "dodgers#dailynews"
+    get "/ducks/dailynews(.:format)" => "ducks#dailynews"
+    get "/preps/dailynews(.:format)" => "preps#dailynews"
+    get "/kings/dailynews(.:format)" => "kings#dailynews"
+    get "/lakers/dailynews(.:format)" => "lakers#dailynews"
   end
 end

@@ -22,4 +22,8 @@ class LakersController < ApplicationController
   def ocregister
     render json: Laker.where(source: "OC Register")
   end
+
+  def dailynews
+    render json: Laker.where(source: "Daily News")
+  end
 end

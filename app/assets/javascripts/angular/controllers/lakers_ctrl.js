@@ -4,11 +4,9 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.stories = stories.data;
     }
   );
-  $http.get('/api/lakers/official.json').then(
-    function(official) {
-      $scope.official = official.data;
-    }
-  );
+}]);
+
+App.controller('LakersTweetsCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('/api/lakers/twitter.json').then(
     function(tweets) {
       $scope.tweets = tweets.data;

@@ -1,6 +1,6 @@
-<div class="container-fluid" ng-controller="SparksCtrl" >
+<div class="container-fluid">
   <div class="row">
-    <div class=" col-sm-5 col-md-5">
+    <div class=" col-sm-5 col-md-5" ng-controller="SparksCtrl" >
       Search Stories: <input ng-model="searchStory"><br><br>
       <div ng-repeat="story in stories | orderBy:'-published' |filter:searchStory">
         <p class="story">
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <div class="col-sm-7 col-md-7">
+    <div class="col-sm-7 col-md-7" ng-controller="SparksTweetsCtrl" >
       Search Tweets: <input ng-model="searchTweet"><br><br>
       <div ng-repeat="tweet in tweets |  filter: searchTweet">
         <p class="tweet">

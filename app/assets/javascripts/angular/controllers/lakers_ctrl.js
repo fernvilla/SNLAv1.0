@@ -9,4 +9,9 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.official = official.data;
     }
   );
+  $http.get('/api/lakers/twitter.json').then(
+    function(tweets) {
+      $scope.tweets = tweets.data;
+    }
+  );
 }]);

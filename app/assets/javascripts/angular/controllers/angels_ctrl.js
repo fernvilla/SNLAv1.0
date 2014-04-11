@@ -4,4 +4,9 @@ App.controller('AngelsCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.stories = stories.data;
     }
   );
+  $http.get('/api/angels/twitter.json').then(
+    function(tweets) {
+      $scope.tweets = tweets.data;
+    }
+  );
 }]);

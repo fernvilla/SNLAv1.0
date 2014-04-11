@@ -29,6 +29,19 @@ SportsNewsLA::Application.routes.draw do
     get "/angels(.:format)" => "angels#api"
     get "/ducks(.:format)" => "ducks#api"
     get "/preps(.:format)" => "preps#api"
+
+    # Routes to twitter feeds
+    get "/lakers/twitter(.:format)" => "lakers#twitter"
+    get "/dodgers/twitter(.:format)" => "dodgers#twitter"
+    get "/clippers/twitter(.:format)" => "clippers#twitter"
+    get "/kings/twitter(.:format)" => "kings#twitter"
+    get "/bruins/twitter(.:format)" => "bruins#twitter"
+    get "/ducks/twitter(.:format)" => "ducks#twitter"
+    get "/angels/twitter(.:format)" => "angels#twitter"
+    get "/trojans/twitter(.:format)" => "trojans#twitter"
+    get "/galaxies/twitter(.:format)" => "galaxies#twitter"
+    get "/chivas/twitter(.:format)" => "chivas#twitter"
+    get "/sparks/twitter(.:format)" => "sparks#twitter"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

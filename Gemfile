@@ -19,6 +19,7 @@ gem 'omniauth-linkedin'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google'
+gem "figaro"
 
 # AngularJS
 gem 'angularjs-rails'

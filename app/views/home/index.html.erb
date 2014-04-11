@@ -10,7 +10,7 @@
       <div class="team-header"><%= link_to "Lakers", lakers_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"title= "{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -19,7 +19,8 @@
     <div ng-controller="ClippersCtrl" class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header"><%= link_to "Clippers", clippers_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
-        <div class="story"><a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -29,7 +30,7 @@
       <div class="team-header"><%= link_to "Dodgers", dodgers_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -39,7 +40,7 @@
       <div class="team-header"><%= link_to "Angels", angels_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -51,7 +52,7 @@
       <div class="team-header"><%= link_to "UCLA", bruins_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10 ">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -61,7 +62,7 @@
       <div class="team-header"><%= link_to "USC", trojans_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -71,7 +72,7 @@
       <div class="team-header"><%= link_to "Kings", kings_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -81,7 +82,7 @@
       <div class="team-header"><%= link_to "Ducks", ducks_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -93,7 +94,7 @@
       <div class="team-header"><%= link_to "Galaxy", galaxies_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -103,7 +104,7 @@
       <div class="team-header"><%= link_to "Chivas", chivas_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -113,7 +114,7 @@
       <div class="team-header"><%= link_to "Sparks", sparks_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>
@@ -123,7 +124,7 @@
       <div class="team-header"><%= link_to "High School", preps_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title= "{{story.summary}}"target="blank">{{story.title}}</a><br>
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </div>
       </div>

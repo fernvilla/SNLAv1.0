@@ -1,4 +1,5 @@
 SportsNewsLA::Application.routes.draw do
+  devise_for :users
   root "home#index"
 
   # Team index page routes

@@ -46,6 +46,14 @@ body {
   }
 }
 
+.navbar .nav > li:hover {
+  background-color: #e6e6e6;
+  a {
+    color: $base-color;
+    text-shadow: none;
+  }
+}
+
 a {
   color: #004080;
   &:hover {

@@ -29,7 +29,7 @@ gem 'ngmin-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
-gem 'masonry-rails'
+# gem 'masonry-rails'
 
 # Heroku
 gem 'rails_12factor'
@@ -50,7 +50,7 @@ gem 'jquery-rails'
 # gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
- gem 'jbuilder'
+ # gem 'jbuilder'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

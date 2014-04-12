@@ -1,7 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="notice"><%= notice %></div>
+    <div class="alert"><%= alert %></div>
+  </div>
+</div>
+
 <div class="container" id="social-container">
   <div class="row" id="sign-in-header">
     <div class="col-xs-12 col-lg-12">
-      <h4>Create an account</h4>
+      <h4>Sign Up For An Account</h4>
     </div>
   </div>
 
@@ -11,25 +18,29 @@
         <%= devise_error_messages! %>
 
         <div><%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %></div>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
 
         <div><%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %></div>
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
 
         <div><%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
 
-        <div><%= f.submit "Sign up" %></div>
+        <div><%= f.submit "Sign up", :class=>"btn btn-default" %></div>
       <% end %>
-
+      
       <%= render "devise/shared/links" %>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-6" id="sign-in-social">
-      <p class="social-button"> <%= link_to image_tag("facebook.png") %> Sign Up With Facebook</p>
-      <p class="social-button"> <%= link_to image_tag("twitter.png") %> Sign Up With Twitter</p>
-      <p class="social-button"> <%= link_to image_tag("google.png") %> Sign Up With Google</p>
-      <p class="social-button"> <%= link_to image_tag("linkedin.png") %> Sign Up With Linkedin</p>  
+      Or sign up with a social account...
+      <div class="social-button"> <%= link_to image_tag("facebook.png") + "Sign Up With Facebook" %></div>
+      <div class="social-button"> <%= link_to image_tag("twitter.png") + "Sign Up With Twitter" %></div>
+      <div class="social-button"> <%= link_to image_tag("google.png") + "Sign Up With Google" %></div>
+      <div class="social-button"> <%= link_to image_tag("linkedin.png") + "Sign Up With Linkedin" %></div>  
     </div>
   </div>
 </div>

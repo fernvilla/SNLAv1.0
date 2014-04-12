@@ -29,6 +29,18 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   padding-bottom: 20px;
 }
+
+.notice {
+  color: green;
+  text-align: center;
+}
+
+.alert {
+  margin: 0 auto;
+  color: red;
+  text-align: center;
+}
+
 #social-container {
   max-width: 700px;
   max-height: 700px;
@@ -50,38 +62,53 @@ body {
 }
 
 #sign-in {
-  padding: 20px;
+  padding: 25px 30px;
   text-align: center;
   color: $base-color;
+  border-right: 1px solid #b3b3b3;
   a {
     color: $base-color;
   }
 }
 
 #sign-in-social {
-  padding: 20px;
+  padding: 10px;
+  color: $base-color;
   text-align: center;
-  border-left: 1px solid #b3b3b3;
+  font-size: 15px;
 }
 
 .social-button {
-  margin: 5px auto;
+  margin: 6px auto;
   color: #fff;
   border-radius: 10px;
+  border: 1px solid #e6e6e6;
   text-align: left;
   padding: 5px;
-  font-size: 12px;
-  ackground-image: -moz-linear-gradient(top,  #09235e 0%, $base-color 100%); /* FF3.6+ */  
+  font-size: 13px;
+  background-image: -moz-linear-gradient(top,  #09235e 0%, $base-color 100%); /* FF3.6+ */  
   background-image: -webkit-linear-gradient(top,  #09235e 0%, $base-color 100%); /* Chrome10+,Safari5.1+ */  
   background-image: -o-linear-gradient(top,  #09235e 0%,$base-color 100%); /* Opera 11.10+ */  
   background-image: -ms-linear-gradient(top,  #09235e 0%,$base-color 100%); /* IE10+ */ 
   width: 180px;
   box-shadow: 1px 1px 1px #000;
   img {
-    width: 40px;
+    width: 45px;
     height: auto;
-    padding-right: 5px;
+    padding-right: 10px;
   }
+  a:visited {
+    color: #fff;
+  }
+  a:hover {
+    color: #e6e6e6;
+  }
+}
+
+.btn {
+  margin: 5px;
+  background-color: $base-color;
+  color: #fff;
 }
 
 #title {

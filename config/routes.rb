@@ -1,4 +1,6 @@
 SportsNewsLA::Application.routes.draw do
+  get 'favorites/index'
+
   devise_for :users
   root "home#index"
 

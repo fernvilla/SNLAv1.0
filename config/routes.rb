@@ -1,8 +1,10 @@
 SportsNewsLA::Application.routes.draw do
-  get 'favorites/index'
-
-  devise_for :users
   root "home#index"
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"}
+  
+  get "favorites" => "favorites#index"
+  get "api/favorites" => "favorites#api"
 
   # Team index page routes
   get "bruins" => "bruins#index"
@@ -82,6 +84,7 @@ SportsNewsLA::Application.routes.draw do
     get "/chivas/espn(.:format)" => "chivas#espn"
     get "/galaxies/espn(.:format)" => "galaxies#espn"
     get "/ducks/espn(.:format)" => "ducks#espn"
+    get "/preps/espn(.:format)" => "preps#espn"
 
     # Routes to stories from OC Register
     get "/preps/ocregister(.:format)" => "preps#ocregister"

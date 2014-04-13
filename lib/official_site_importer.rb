@@ -4,6 +4,7 @@ class OfficialSiteImporter
   def self.import_official_news
     source = "Official Site"
     lakers_feed = Feedjira::Feed.fetch_and_parse("http://www.nba.com/lakers/rss.xml")
+    lakers_feed_two = Feedjira::Feed.fetch_and_parse("http://blog.lakers.com/lakers/feed/")
     clippers_feed = Feedjira::Feed.fetch_and_parse("http://www.nba.com/clippers/rss.xml")
     dodgers_feed = Feedjira::Feed.fetch_and_parse("http://losangeles.dodgers.mlb.com/partnerxml/gen/news/rss/la.xml")
     kings_feed = Feedjira::Feed.fetch_and_parse("http://kings.nhl.com/rss/news.xml")
@@ -15,6 +16,18 @@ class OfficialSiteImporter
     trojans_feed = Feedjira::Feed.fetch_and_parse("http://www.usctrojans.com/blog/atom.xml")
 
     lakers_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    lakers_feed_two.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,

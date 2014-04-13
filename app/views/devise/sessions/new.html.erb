@@ -33,10 +33,10 @@
 
     <div class="col-xs-12 col-sm-6 col-md-6" id="sign-in-social">
       Or sign in with a social account...
-      <div class="social-button"> <%= link_to image_tag("facebook.png") + "Sign In With Facebook" %></div>
-      <div class="social-button"> <%= link_to image_tag("twitter.png") + "Sign In With Twitter" %></div>
-      <div class="social-button"> <%= link_to image_tag("google.png") + "Sign In With Google" %></div>
-      <div class="social-button"> <%= link_to image_tag("linkedin.png") + "Sign In With Linkedin" %></div>   
+      <div class="social-button"> <%= link_to image_tag("facebook.png") + "Sign In With Facebook", user_omniauth_authorize_path(:facebook) %></div>
+      <div class="social-button"> <%= link_to image_tag("twitter.png") + "Sign In With Twitter", user_omniauth_authorize_path(:twitter) %></div>
+      <div class="social-button"> <%= link_to image_tag("google.png") + "Sign In With Google", user_omniauth_authorize_path(:google_oauth2) %></div>
+      <div class="social-button"> <%= link_to image_tag("linkedin.png") + "Sign In With Linkedin", user_omniauth_authorize_path(:linkedin) %></div>   
     </div>
   </div>
 </div>

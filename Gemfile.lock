@@ -116,9 +116,8 @@ GEM
     omniauth-google-oauth2 (0.2.2)
       omniauth (~> 1.0)
       omniauth-oauth2
-    omniauth-linkedin-oauth2 (0.1.5)
-      omniauth (~> 1.0)
-      omniauth-oauth2
+    omniauth-linkedin (0.1.0)
+      omniauth-oauth (~> 1.0)
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -239,7 +238,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
-  omniauth-linkedin-oauth2
+  omniauth-linkedin
   omniauth-twitter
   pg
   pry

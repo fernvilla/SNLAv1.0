@@ -5,6 +5,7 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
     }
   );
   $scope.addFavorite = function(id) {
+    $http.post('/api/favorites.json', {id: id-1, title: $scope.id});
     console.log($scope.stories[id-1]);
   }
 }]);

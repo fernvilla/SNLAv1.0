@@ -15,11 +15,11 @@ gem 'twitter'
 # Authentication
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-linkedin'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
-gem "figaro"
+gem 'figaro'
 
 # AngularJS
 gem 'angularjs-rails'
@@ -28,7 +28,7 @@ gem 'ngmin-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 # gem 'masonry-rails'
 
 # Heroku

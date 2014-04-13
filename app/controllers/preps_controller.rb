@@ -15,6 +15,10 @@ class PrepsController < ApplicationController
     render json: Prep.where(source: "LA Times")
   end
 
+  def espn
+    render json: Prep.where(source: "ESPN")
+  end
+
   def ocregister
     render json: Prep.where(source: "OC Register")
   end

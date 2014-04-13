@@ -12,8 +12,8 @@ namespace :news_sync do
     OfficialSiteImporter.import_official_news
     LATimesImporter.import_la_times
     OCRegisterImporter.import_oc_register
-    DailyNewsImporter.import_daily_news
     CBSImporter.import_cbs
+    DailyNewsImporter.import_daily_news
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

@@ -22,6 +22,7 @@ class EspnImporter
     sparks_feed = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/los-angeles-sparks/")
     galaxy_feed = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/los-angeles-galaxy/")
     chivas_feed = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/chivas-usa/")
+    preps_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelespreps")
 
     lakers_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
@@ -250,6 +251,18 @@ class EspnImporter
     chivas_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Chiva.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    preps_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Prep.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,

@@ -11,7 +11,8 @@
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
-          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+          <i class="fa fa-star-o" title="Add to favorites"></i>
         </div>
       </div>
     </div>
@@ -21,7 +22,8 @@
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
-          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+          <i class="fa fa-star-o" title="Add to favorites"></i>
         </div>
       </div>
     </div>

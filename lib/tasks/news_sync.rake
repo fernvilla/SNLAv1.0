@@ -3,6 +3,7 @@ require 'official_site_importer'
 require 'latimes_importer'
 require 'ocregister_importer'
 require 'dailynews_importer'
+require 'cbs_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -12,6 +13,7 @@ namespace :news_sync do
     LATimesImporter.import_la_times
     OCRegisterImporter.import_oc_register
     DailyNewsImporter.import_daily_news
+    CBSImporter.import_cbs
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

@@ -70,7 +70,7 @@ GEM
       rails (>= 3, < 5)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
-    hashie (2.1.0)
+    hashie (2.1.1)
     hike (1.2.3)
     http (0.5.0)
       http_parser.rb
@@ -113,12 +113,12 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (1.6.0)
       omniauth-oauth2 (~> 1.1)
-    omniauth-google (1.0.2)
-      multi_json
+    omniauth-google-oauth2 (0.2.2)
       omniauth (~> 1.0)
-      omniauth-oauth
-    omniauth-linkedin (0.1.0)
-      omniauth-oauth (~> 1.0)
+      omniauth-oauth2
+    omniauth-linkedin-oauth2 (0.1.5)
+      omniauth (~> 1.0)
+      omniauth-oauth2
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -238,8 +238,8 @@ DEPENDENCIES
   ngmin-rails
   omniauth
   omniauth-facebook
-  omniauth-google
-  omniauth-linkedin
+  omniauth-google-oauth2
+  omniauth-linkedin-oauth2
   omniauth-twitter
   pg
   pry

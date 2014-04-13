@@ -15,10 +15,10 @@ gem 'twitter'
 # Authentication
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-linkedin'
+gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
-gem 'omniauth-google'
+gem 'omniauth-google-oauth2'
 gem "figaro"
 
 # AngularJS

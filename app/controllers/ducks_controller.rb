@@ -32,4 +32,8 @@ class DucksController < ApplicationController
   def dailynews
     render json: Duck.where(source: "Daily News")
   end
+
+  def cbs
+    render json: Duck.where(source: "CBS Los Angeles")
+  end
 end

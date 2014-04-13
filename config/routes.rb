@@ -100,5 +100,14 @@ SportsNewsLA::Application.routes.draw do
     get "/preps/dailynews(.:format)" => "preps#dailynews"
     get "/kings/dailynews(.:format)" => "kings#dailynews"
     get "/lakers/dailynews(.:format)" => "lakers#dailynews"
+
+    # Routes to stories from CBS Los Angeles
+    get "/lakers/cbs(.:format)" => "lakers#cbs"
+    get "/clippers/cbs(.:format)" => "clippers#cbs"
+    get "/dodgers/cbs(.:format)" => "dodgers#cbs"
+    get "/angels/cbs(.:format)" => "angels#cbs"
+    get "/kings/cbs(.:format)" => "kings#cbs"
+    get "/ducks/cbs(.:format)" => "ducks#cbs"
+    get "/preps/cbs(.:format)" => "preps#cbs"
   end
 end

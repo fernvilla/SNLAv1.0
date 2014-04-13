@@ -22,4 +22,8 @@ class PrepsController < ApplicationController
   def dailynews
     render json: Prep.where(source: "Daily News")
   end
+
+  def cbs
+    render json: Prep.where(source: "CBS Los Angeles")
+  end
 end

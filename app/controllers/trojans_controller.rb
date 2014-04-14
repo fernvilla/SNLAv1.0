@@ -32,4 +32,24 @@ class TrojansController < ApplicationController
   def ocregister
     render json: Trojan.where(source: "OC Register")
   end
+
+  def inside_usc
+    render json: Trojan.where(source: "Inside USC")
+  end
+
+  def conquest_chronicles
+    render json: Trojan.where(source: "Conquest Chronicles")
+  end
+
+  def rivals
+    render json: Trojan.where(source: "Rivals")
+  end
+
+  def scout
+    render json: Trojan.where(source: "Scout")
+  end
+
+  def bleacher_report
+    render json: Trojan.where(source: "Bleacher Report")
+  end
 end

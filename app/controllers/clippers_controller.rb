@@ -40,4 +40,8 @@ class ClippersController < ApplicationController
   def cbs
     render json: Clipper.where(source: "CBS Los Angeles")
   end
+
+  def bleacher_report
+    render json: Clipper.where(source: "Bleacher Report")
+  end
 end

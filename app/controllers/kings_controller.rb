@@ -40,4 +40,8 @@ class KingsController < ApplicationController
   def cbs
     render json: King.where(source: "CBS Los Angeles")
   end
+
+  def bleacher_report
+    render json: King.where(source: "Bleacher Report")
+  end
 end

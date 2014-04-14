@@ -60,4 +60,8 @@ class BruinsController < ApplicationController
   def scout
     render json: Bruin.where(source: "Scout")
   end
+
+  def bleacher_report
+    render json: Bruin.where(source: "Bleacher Report")
+  end
 end

@@ -40,4 +40,8 @@ class LakersController < ApplicationController
   def cbs
     render json: Laker.where(source: "CBS Los Angeles")
   end
+
+  def bleacher_report
+    render json: Laker.where(source: "Bleacher Report")
+  end
 end

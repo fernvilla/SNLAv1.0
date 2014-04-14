@@ -44,4 +44,8 @@ class DucksController < ApplicationController
   def on_the_duck_pond
     render json: Duck.where(source: "On the Duck Pond")
   end
+
+  def bleacher_report
+    render json: Duck.where(source: "Bleacher Report")
+  end
 end

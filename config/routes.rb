@@ -115,6 +115,18 @@ SportsNewsLA::Application.routes.draw do
     get "/ducks/cbs(.:format)" => "ducks#cbs"
     get "/preps/cbs(.:format)" => "preps#cbs"
 
+    # Routes to stories from Bleacher Report
+    get "/lakers/bleacher_report(.:format)" => "lakers#bleacher_report"
+    get "/clippers/bleacher_report(.:format)" => "clippers#bleacher_report"
+    get "/angels/bleacher_report(.:format)" => "angels#bleacher_report"
+    get "/dodgers/bleacher_report(.:format)" => "dodgers#bleacher_report"
+    get "/bruins/bleacher_report(.:format)" => "bruins#bleacher_report"
+    get "/trojans/bleacher_report(.:format)" => "trojans#bleacher_report"
+    get "/ducks/bleacher_report(.:format)" => "ducks#bleacher_report"
+    get "/kings/bleacher_report(.:format)" => "kings#bleacher_report"
+    get "/chivas/bleacher_report(.:format)" => "chivas#bleacher_report"
+    get "/galaxy/bleacher_report(.:format)" => "galaxies#bleacher_report"
+
     # Routes to Galaxy blogs
     get "/galaxy/lag_confidential(.:format)" => "galaxies#lag_confidential"
     get "/galaxy/corner_of_the_galaxy(.:format)" => "galaxies#corner_of_the_galaxy"
@@ -134,5 +146,11 @@ SportsNewsLA::Application.routes.draw do
     get "/bruins/bruin_247(.:format)" => "bruins#bruin_247"
     get "/bruins/rivals(.:format)" => "bruins#rivals"
     get "/bruins/scout(.:format)" => "bruins#scout"
+
+    # Routes to Trojans blogs
+    get "/trojans/inside_usc(.:format)" => "trojans#inside_usc"
+    get "/trojans/conquest_chronicles(.:format)" => "trojans#conquest_chronicles"
+    get "/trojans/rivals(.:format)" => "trojans#rivals"
+    get "/trojans/scout(.:format)" => "trojans#scout"
   end
 end

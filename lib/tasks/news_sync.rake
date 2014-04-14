@@ -8,6 +8,8 @@ require 'galaxy_blogs_importer'
 require 'chivas_blogs_importer'
 require 'ducks_blogs_importer'
 require 'bruins_blogs_importer'
+require 'trojans_blogs_importer'
+require 'bleacher_report_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -21,6 +23,8 @@ namespace :news_sync do
     ChivasImporter.import_blogs
     DucksImporter.import_blogs
     BruinsImporter.import_blogs
+    TrojansImporter.import_blogs
+    BleacherReportImporter.import_bleacher_report
     DailyNewsImporter.import_daily_news
 
     puts "There are now #{Laker.count} Lakers stories."

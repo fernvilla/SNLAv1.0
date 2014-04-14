@@ -9,8 +9,9 @@ gem 'pg'
 # News grabber
 gem 'feedjira'
 
-# Twitter feeds
+# Social media
 gem 'twitter'
+gem 'instagram'
 
 # Authentication
 gem 'devise'

@@ -13,6 +13,15 @@ class LakersController < ApplicationController
     render json: client.user_timeline('lakers')
   end
 
+  def instagram
+    Instagram.configure do |config|
+     config.client_id = ENV["INSTAGRAM_KEY"]
+     config.client_secret = ENV["INSTAGRAM_SECRET"] 
+     config.access_token = ENV["INSTAGRAM_ACCESS_TOKEN"]
+    end
+    render json: Instagram.user_recent_media(16917874)
+  end
+
   def api
     render json: Laker.all
   end

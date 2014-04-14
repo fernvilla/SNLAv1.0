@@ -48,6 +48,9 @@ SportsNewsLA::Application.routes.draw do
     get "/chivas/twitter(.:format)" => "chivas#twitter"
     get "/sparks/twitter(.:format)" => "sparks#twitter"
     get "/preps/twitter(.:format)" => "preps#twitter"
+
+    # Routes to instagram feed
+    get "/lakers/instagram(.:format)" => "lakers#instagram"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

@@ -6,6 +6,7 @@ require 'dailynews_importer'
 require 'cbs_importer'
 require 'galaxy_blogs_importer'
 require 'chivas_blogs_importer'
+require 'ducks_blogs_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -18,6 +19,7 @@ namespace :news_sync do
     DailyNewsImporter.import_daily_news
     GalaxyImporter.import_blogs
     ChivasImporter.import_blogs
+    DucksImporter.import_blogs
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

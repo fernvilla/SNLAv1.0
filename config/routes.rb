@@ -121,5 +121,9 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to Chivas blogs
     get "/chivas/the_goat_parade(.:format)" => "chivas#the_goat_parade"
+
+    # Routes to Ducks blogs
+    get "/ducks/anaheim_calling(.:format)" => "ducks#anaheim_calling"
+    get "/ducks/on_the_duck_pond(.:format)" => "ducks#on_the_duck_pond"
   end
 end

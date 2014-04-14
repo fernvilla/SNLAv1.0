@@ -125,5 +125,14 @@ SportsNewsLA::Application.routes.draw do
     # Routes to Ducks blogs
     get "/ducks/anaheim_calling(.:format)" => "ducks#anaheim_calling"
     get "/ducks/on_the_duck_pond(.:format)" => "ducks#on_the_duck_pond"
+
+    # Routes to Bruins blogs
+    get "/bruins/inside_ucla(.:format)" => "bruins#inside_ucla"
+    get "/bruins/bruins_nation(.:format)" => "bruins#bruins_nation"
+    get "/bruins/punting_is_winning(.:format)" => "bruins#punting_is_winning"
+    get "/bruins/go_joe_bruin(.:format)" => "bruins#go_joe_bruin"
+    get "/bruins/bruin_247(.:format)" => "bruins#bruin_247"
+    get "/bruins/rivals(.:format)" => "bruins#rivals"
+    get "/bruins/scout(.:format)" => "bruins#scout"
   end
 end

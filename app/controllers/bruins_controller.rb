@@ -32,4 +32,32 @@ class BruinsController < ApplicationController
   def ocregister
     render json: Bruin.where(source: "OC Register")
   end
+
+  def inside_ucla
+    render json: Bruin.where(source: "Inside UCLA")
+  end
+
+  def bruins_nation
+    render json: Bruin.where(source: "Bruins Nation")
+  end
+
+  def punting_is_winning
+    render json: Bruin.where(source: "Punting is Winning")
+  end
+
+  def go_joe_bruin
+    render json: Bruin.where(source: "Go Joe Bruin")
+  end
+
+  def bruin_247
+    render json: Bruin.where(source: "Bruin 247")
+  end
+
+  def rivals
+    render json: Bruin.where(source: "Rivals")
+  end
+
+  def scout
+    render json: Bruin.where(source: "Scout")
+  end
 end

@@ -93,7 +93,7 @@
 
   <div class="row">
     <div ng-controller="GalaxyCtrl" class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header"><%= link_to "Galaxy", galaxies_path %></div>
+      <div class="team-header"><%= link_to "Galaxy", galaxy_path %></div>
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>

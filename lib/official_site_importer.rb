@@ -9,6 +9,7 @@ class OfficialSiteImporter
     dodgers_feed = Feedjira::Feed.fetch_and_parse("http://losangeles.dodgers.mlb.com/partnerxml/gen/news/rss/la.xml")
     kings_feed = Feedjira::Feed.fetch_and_parse("http://kings.nhl.com/rss/news.xml")
     galaxy_feed = Feedjira::Feed.fetch_and_parse("http://www.lagalaxy.com/rss/en.xml")
+    galaxy_feed_two = Feedjira::Feed.fetch_and_parse("http://www.lagalaxy.com/rss/blog/feed.xml")
     chivas_feed = Feedjira::Feed.fetch_and_parse("http://www.cdchivasusa.com/rss/en.xml")
     bruins_feed = Feedjira::Feed.fetch_and_parse("http://www.uclabruins.com/rss.dbml?db_oem_id=30500&media=news")
     ducks_feed = Feedjira::Feed.fetch_and_parse("http://ducks.nhl.com/rss/news.xml")
@@ -81,6 +82,18 @@ class OfficialSiteImporter
         title:      entry.title,
         author:     entry.author,
         summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     source
+      )
+    end
+
+    galaxy_feed_two.entries.each do |entry|
+      # summary = entry.summary.gsub(/<[^>]*>/, '')
+      Galaxy.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
         source:     source

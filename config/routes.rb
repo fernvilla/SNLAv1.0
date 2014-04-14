@@ -14,7 +14,7 @@ SportsNewsLA::Application.routes.draw do
   get "kings" => "kings#index"
   get "trojans" => "trojans#index"
   get "sparks" => "sparks#index"
-  get "galaxies" => "galaxies#index"
+  get "galaxy" => "galaxies#index"
   get "chivas" => "chivas#index"
   get "angels" => "angels#index"
   get "ducks" => "ducks#index"
@@ -29,7 +29,7 @@ SportsNewsLA::Application.routes.draw do
     get "/bruins(.:format)" => "bruins#api"
     get "/trojans(.:format)" => "trojans#api"
     get "/sparks(.:format)" => "sparks#api"
-    get "/galaxies(.:format)" => "galaxies#api"
+    get "/galaxy(.:format)" => "galaxies#api"
     get "/chivas(.:format)" => "chivas#api"
     get "/angels(.:format)" => "angels#api"
     get "/ducks(.:format)" => "ducks#api"
@@ -44,7 +44,7 @@ SportsNewsLA::Application.routes.draw do
     get "/ducks/twitter(.:format)" => "ducks#twitter"
     get "/angels/twitter(.:format)" => "angels#twitter"
     get "/trojans/twitter(.:format)" => "trojans#twitter"
-    get "/galaxies/twitter(.:format)" => "galaxies#twitter"
+    get "/galaxy/twitter(.:format)" => "galaxies#twitter"
     get "/chivas/twitter(.:format)" => "chivas#twitter"
     get "/sparks/twitter(.:format)" => "sparks#twitter"
     get "/preps/twitter(.:format)" => "preps#twitter"
@@ -54,7 +54,7 @@ SportsNewsLA::Application.routes.draw do
     get "/clippers/official(.:format)" => "clippers#official"
     get "/dodgers/official(.:format)" => "dodgers#official"
     get "/kings/official(.:format)" => "kings#official"
-    get "/galaxies/official(.:format)" => "galaxies#official"
+    get "/galaxy/official(.:format)" => "galaxies#official"
     get "/chivas/official(.:format)" => "chivas#official"  
     get "/bruins/official(.:format)" => "bruins#official" 
     get "/ducks/official(.:format)" => "ducks#official" 
@@ -82,7 +82,7 @@ SportsNewsLA::Application.routes.draw do
     get "/sparks/espn(.:format)" => "sparks#espn"
     get "/angels/espn(.:format)" => "angels#espn"
     get "/chivas/espn(.:format)" => "chivas#espn"
-    get "/galaxies/espn(.:format)" => "galaxies#espn"
+    get "/galaxy/espn(.:format)" => "galaxies#espn"
     get "/ducks/espn(.:format)" => "ducks#espn"
     get "/preps/espn(.:format)" => "preps#espn"
 
@@ -114,5 +114,12 @@ SportsNewsLA::Application.routes.draw do
     get "/kings/cbs(.:format)" => "kings#cbs"
     get "/ducks/cbs(.:format)" => "ducks#cbs"
     get "/preps/cbs(.:format)" => "preps#cbs"
+
+    # Routes to Galaxy blogs
+    get "/galaxy/lag_confidential(.:format)" => "galaxies#lag_confidential"
+    get "/galaxy/corner_of_the_galaxy(.:format)" => "galaxies#corner_of_the_galaxy"
+
+    # Routes to Chivas blogs
+    get "/chivas/the_goat_parade(.:format)" => "chivas#the_goat_parade"
   end
 end

@@ -4,6 +4,8 @@ require 'latimes_importer'
 require 'ocregister_importer'
 require 'dailynews_importer'
 require 'cbs_importer'
+require 'galaxy_blogs_importer'
+require 'chivas_blogs_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -14,6 +16,8 @@ namespace :news_sync do
     OCRegisterImporter.import_oc_register
     CBSImporter.import_cbs
     DailyNewsImporter.import_daily_news
+    GalaxyImporter.import_blogs
+    ChivasImporter.import_blogs
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

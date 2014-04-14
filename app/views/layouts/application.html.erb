@@ -40,7 +40,7 @@
           <li><%= link_to "UCLA", bruins_path %></li>
           <li><%= link_to "USC", trojans_path %></li>
           <li><%= link_to "Sparks", sparks_path %></li>
-          <li><%= link_to "Galaxy", galaxies_path %></li>
+          <li><%= link_to "Galaxy", galaxy_path %></li>
           <li><%= link_to "Chivas USA", chivas_path %></li>
           <li><%= link_to "High School", preps_path %></li>
         </ul>
@@ -51,9 +51,9 @@
           <li><a>|</a></li> -->
           <li class="dropdown">
             <% if user_signed_in? %>
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %><b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name == nil ? current_user.email : current_user.name%><b class="caret"></b></a>
               <ul class="dropdown-menu">
-              <li><a href="#">Favorites Dashboard</a></li>
+              <li><%= link_to "Favorites Dashboard", favorites_path %></li>
               <li><%= link_to "Settings", edit_user_registration_path %></li>
               <li class="divider"></li>
               <li><%= link_to "Sign Out", destroy_user_session_path,:method => :delete %></li>

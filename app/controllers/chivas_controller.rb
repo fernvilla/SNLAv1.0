@@ -24,4 +24,8 @@ class ChivasController < ApplicationController
   def espn
     render json: Chiva.where(source: "ESPN")
   end
+
+  def the_goat_parade
+    render json: Chiva.where(source: "The Goat Parade")
+  end
 end

@@ -118,6 +118,22 @@
     </div>
   </div>
 
+  <!-- Tumblr -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="LakersTumblrCtrl" >
+      <div class="team-header">
+        <i class="fa fa-tumblr"></i> 
+        <a href="http://lakers.tumblr.com" target="blank">Team Tumblr Feed</a>
+      </div>
+      <div ng-repeat="image in tumblr.posts | limitTo: 12">
+        <p class="tumblr">
+          <a href="{{image.post_url}}" target="blank"><img src="{{image.photos[0].original_size.url}}" alt="{{image.caption}}" title="{{image.caption}}"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End Tumblr -->
+
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Lakers Nation</div>

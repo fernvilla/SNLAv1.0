@@ -9,6 +9,9 @@ class LakersImporter
     laker_nation = Feedjira::Feed.fetch_and_parse("http://lakernation.com/feed/")
     lakerholicz = Feedjira::Feed.fetch_and_parse("http://lakerholicz.com/feed")
     lake_show_life = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/feed/")
+    lake_show_life_two = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/category/nba/nbanews/feed/")
+    lake_show_life_three = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/category/lakers-2/feed/")
+    lake_show_life_four = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/category/lakers/recaps/feed/")
     fansided = Feedjira::Feed.fetch_and_parse("http://fansided.com/tag/los-angeles-lakers/feed/")
 
     inside_the_lakers.entries.each do |entry|
@@ -83,6 +86,42 @@ class LakersImporter
     end
 
     lake_show_life.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     "Lake Show Life"
+      )
+    end
+
+    lake_show_life_two.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     "Lake Show Life"
+      )
+    end
+
+    lake_show_life_three.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        source:     "Lake Show Life"
+      )
+    end
+
+    lake_show_life_four.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
         title:      entry.title,

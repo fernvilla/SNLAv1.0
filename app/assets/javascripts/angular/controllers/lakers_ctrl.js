@@ -104,3 +104,11 @@ App.controller('LakersInstagramCtrl', ['$scope', '$http', function($scope, $http
     }
   );
 }]);
+
+App.controller('LakersTumblrCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/lakers/tumblr.json').then(
+    function(tumblr) {
+      $scope.tumblr = tumblr.data;
+    }
+  );
+}]);

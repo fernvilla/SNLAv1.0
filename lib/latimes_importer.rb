@@ -113,11 +113,11 @@ class LATimesImporter
     end
 
     sparks_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
+      # summary = entry.summary.gsub(/<[^>]*>/, '')
       Spark.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
-        summary:    summary,
+        summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
         source:     source

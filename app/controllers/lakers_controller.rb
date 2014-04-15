@@ -30,7 +30,7 @@ class LakersController < ApplicationController
       # config.oauth_token_secret = "access_token_secret"
     end
     client = Tumblr::Client.new(:client => :httpclient)
-    render json: client.posts("lakers.tumblr.com", :limit => 15)
+    render json: client.posts("lakers.tumblr.com", :limit => 7)
   end
 
   def api

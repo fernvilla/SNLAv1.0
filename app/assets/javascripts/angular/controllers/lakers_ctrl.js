@@ -42,6 +42,51 @@ App.controller('LakersHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.bleacher_report = bleacher_report.data;
     }
   );
+  $http.get('/api/lakers/inside_the_lakers.json').then(
+    function(inside_the_lakers){
+      $scope.inside_the_lakers = inside_the_lakers.data;
+    }
+  );
+  $http.get('/api/lakers/lakers_nation.json').then(
+    function(lakers_nation){
+      $scope.lakers_nation = lakers_nation.data;
+    }
+  );
+  $http.get('/api/lakers/forum_blue_and_gold.json').then(
+    function(forum_blue_and_gold){
+      $scope.forum_blue_and_gold = forum_blue_and_gold.data;
+    }
+  );
+  $http.get('/api/lakers/silver_screen_and_roll.json').then(
+    function(silver_screen_and_roll){
+      $scope.silver_screen_and_roll = silver_screen_and_roll.data;
+    }
+  );
+  $http.get('/api/lakers/laker_nation.json').then(
+    function(laker_nation){
+      $scope.laker_nation = laker_nation.data;
+    }
+  );
+  $http.get('/api/lakers/lakerholicz.json').then(
+    function(lakerholicz){
+      $scope.lakerholicz = lakerholicz.data;
+    }
+  );
+  $http.get('/api/lakers/lake_show_life.json').then(
+    function(lake_show_life){
+      $scope.lake_show_life = lake_show_life.data;
+    }
+  );
+  $http.get('/api/lakers/la_sports_hub.json').then(
+    function(la_sports_hub){
+      $scope.la_sports_hub = la_sports_hub.data;
+    }
+  );
+  $http.get('/api/lakers/fansided.json').then(
+    function(fansided){
+      $scope.fansided = fansided.data;
+    }
+  );
 }]);
 
 App.controller('LakersTweetsCtrl', ['$scope', '$http', function($scope, $http) {

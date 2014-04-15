@@ -10,22 +10,26 @@ require 'ducks_blogs_importer'
 require 'bruins_blogs_importer'
 require 'trojans_blogs_importer'
 require 'bleacher_report_importer'
+require 'lakers_blogs_importer'
+require 'la_sports_hub_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
   task :news => :environment do
-    EspnImporter.import_espn
-    OfficialSiteImporter.import_official_news
-    LATimesImporter.import_la_times
-    OCRegisterImporter.import_oc_register
-    CBSImporter.import_cbs
-    GalaxyImporter.import_blogs
-    ChivasImporter.import_blogs
-    DucksImporter.import_blogs
-    BruinsImporter.import_blogs
-    TrojansImporter.import_blogs
-    BleacherReportImporter.import_bleacher_report
-    DailyNewsImporter.import_daily_news
+    # EspnImporter.import_espn
+    # OfficialSiteImporter.import_official_news
+    # LATimesImporter.import_la_times
+    # OCRegisterImporter.import_oc_register
+    # CBSImporter.import_cbs
+    # GalaxyImporter.import_blogs
+    # ChivasImporter.import_blogs
+    # DucksImporter.import_blogs
+    # BruinsImporter.import_blogs
+    # TrojansImporter.import_blogs
+    # BleacherReportImporter.import_bleacher_report
+    # DailyNewsImporter.import_daily_news
+    LakersImporter.import_blogs
+    # LASportsHubImporter.import_la_sports_hub
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

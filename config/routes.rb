@@ -130,6 +130,19 @@ SportsNewsLA::Application.routes.draw do
     get "/chivas/bleacher_report(.:format)" => "chivas#bleacher_report"
     get "/galaxy/bleacher_report(.:format)" => "galaxies#bleacher_report"
 
+    # Routes to stories from LA Sports Hub
+    get "/lakers/la_sports_hub(.:format)" => "lakers#la_sports_hub"
+
+    # Routes to Lakers blogs
+    get "/lakers/inside_the_lakers(.:format)" => "lakers#inside_the_lakers"
+    get "/lakers/lakers_nation(.:format)" => "lakers#lakers_nation"
+    get "/lakers/forum_blue_and_gold(.:format)" => "lakers#forum_blue_and_gold"
+    get "/lakers/silver_screen_and_roll(.:format)" => "lakers#silver_screen_and_roll"
+    get "/lakers/laker_nation(.:format)" => "lakers#laker_nation"
+    get "/lakers/lakerholicz(.:format)" => "lakers#lakerholicz"
+    get "/lakers/lake_show_life(.:format)" => "lakers#lake_show_life"
+    get "/lakers/fansided(.:format)" => "lakers#fansided"
+
     # Routes to Galaxy blogs
     get "/galaxy/lag_confidential(.:format)" => "galaxies#lag_confidential"
     get "/galaxy/corner_of_the_galaxy(.:format)" => "galaxies#corner_of_the_galaxy"

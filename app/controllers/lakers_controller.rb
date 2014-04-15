@@ -53,4 +53,40 @@ class LakersController < ApplicationController
   def bleacher_report
     render json: Laker.where(source: "Bleacher Report")
   end
+
+  def inside_the_lakers
+    render json: Laker.where(source: "Inside the Lakers")
+  end
+
+  def lakers_nation
+    render json: Laker.where(source: "Lakers Nation")
+  end
+
+  def forum_blue_and_gold
+    render json: Laker.where(source: "Forum Blue and Gold")
+  end
+
+  def silver_screen_and_roll
+    render json: Laker.where(source: "Silver Screen and Roll")
+  end
+
+  def laker_nation
+    render json: Laker.where(source: "Laker Nation")
+  end
+
+  def lakerholicz
+    render json: Laker.where(source: "Lakerholicz")
+  end
+
+  def lake_show_life
+    render json: Laker.where(source: "Lake Show Life")
+  end
+
+  def la_sports_hub
+    render json: Laker.where(source: "LA Sports Hub")
+  end
+
+  def fansided
+    render json: Laker.where(source: "Fansided")
+  end
 end

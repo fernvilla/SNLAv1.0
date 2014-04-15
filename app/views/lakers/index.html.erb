@@ -50,8 +50,10 @@
   <!-- Twitter and Instagram -->
   <div class="row">
     <div class="col-sm-6 col-md-6" ng-controller="LakersTweetsCtrl" >
-      <div class="team-header">Team Twitter Feed</div>
-      <!-- Search Tweets: <input ng-model="searchTweet"><br><br> -->
+      <div class="team-header">
+        <i class="fa fa-twitter"></i>
+        <a href="http://twitter.com/lakers" target="blank">Team Twitter Feed</a>
+      </div>
       <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
           <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a>
@@ -61,16 +63,20 @@
     </div>
 
     <div class="col-sm-6 col-md-6" ng-controller="LakersInstagramCtrl" >
-      <div class="team-header">Team Instagram Feed</div>
+      <div class="team-header">
+        <i class="fa fa-instagram"></i>
+        <a href="http://instagram.com/lakers" target="blank">Team Instagram Feed</a>
+      </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">
           <a href="{{image.link}}" target="blank"><img src="{{image.images.thumbnail.url}}" alt="{{image.caption.text}}" title="{{image.caption.text}}"></a>
         </p>
       </div>
     </div>
-    <!-- End Twitter and Instagram -->
+  </div>
+  <!-- End Twitter and Instagram -->
 
-    <div class="row">
+  <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Daily News</div>
       <div ng-repeat="story in dailynews | orderBy: '-published' | limitTo: 10">
@@ -102,8 +108,8 @@
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-3">
-      <div class="team-header">Orange County Register</div>
-      <div ng-repeat="story in  | orderBy: '-published' | limitTo: 10">
+      <div class="team-header">Inside The Lakers</div>
+      <div ng-repeat="story in inside_the_lakers | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
@@ -112,6 +118,88 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Lakers Nation</div>
+      <div ng-repeat="story in lakers_nation | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Forum Blue And Gold</div>
+      <div ng-repeat="story in forum_blue_and_gold | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Silver Screen and Roll</div>
+      <div ng-repeat="story in silver_screen_and_roll | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Laker Nation</div>
+      <div ng-repeat="story in laker_nation | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Lakerholicz</div>
+      <div ng-repeat="story in lakerholicz | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Lake Show Life</div>
+      <div ng-repeat="story in lake_show_life | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">LA Sports Hub</div>
+      <div ng-repeat="story in la_sports_hub | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Fansided</div>
+      <div ng-repeat="story in fansided | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a><br>
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -12,6 +12,9 @@ gem 'feedjira'
 # Social media
 gem 'twitter'
 gem 'instagram'
+gem 'tumblr_client'
+gem 'youtube_it'
+gem 'koala'
 
 # Authentication
 gem 'devise'

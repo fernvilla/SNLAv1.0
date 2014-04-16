@@ -138,6 +138,14 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to stories from Fox Sports
     get "/lakers/fox_sports(.:format)" => "lakers#fox_sports"
+    get "/clippers/fox_sports(.:format)" => "clippers#fox_sports"
+    get "/angels/fox_sports(.:format)" => "angels#fox_sports"
+    get "/dodgers/fox_sports(.:format)" => "dodgers#fox_sports"
+    get "/bruins/fox_sports(.:format)" => "bruins#fox_sports"
+    get "/trojans/fox_sports(.:format)" => "trojans#fox_sports"
+    get "/ducks/fox_sports(.:format)" => "ducks#fox_sports"
+    get "/kings/fox_sports(.:format)" => "kings#fox_sports"
+    get "/sparks/fox_sports(.:format)" => "sparks#fox_sports"
 
     # Routes to stories from LA Sports Hub
     get "/lakers/la_sports_hub(.:format)" => "lakers#la_sports_hub"

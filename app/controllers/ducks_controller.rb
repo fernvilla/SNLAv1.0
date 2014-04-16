@@ -48,4 +48,8 @@ class DucksController < ApplicationController
   def bleacher_report
     render json: Duck.where(source: "Bleacher Report")
   end
+
+  def fox_sports
+    render json: Duck.where(source: "FOX Sports")
+  end
 end

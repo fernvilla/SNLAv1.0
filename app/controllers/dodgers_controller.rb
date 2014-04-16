@@ -44,4 +44,8 @@ class DodgersController < ApplicationController
   def bleacher_report
     render json: Dodger.where(source: "Bleacher Report")
   end
+
+  def fox_sports
+    render json: Dodger.where(source: "FOX Sports")
+  end
 end

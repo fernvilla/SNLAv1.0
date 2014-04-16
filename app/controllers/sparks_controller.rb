@@ -24,4 +24,8 @@ class SparksController < ApplicationController
   def espn
     render json: Spark.where(source: "ESPN")
   end
+
+  def fox_sports
+    render json: Spark.where(source: "FOX Sports")
+  end
 end

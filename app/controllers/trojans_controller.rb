@@ -52,4 +52,8 @@ class TrojansController < ApplicationController
   def bleacher_report
     render json: Trojan.where(source: "Bleacher Report")
   end
+
+  def fox_sports
+    render json: Trojan.where(source: "FOX Sports")
+  end
 end

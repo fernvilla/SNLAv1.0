@@ -54,6 +54,9 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to tumblr feed
     get "/lakers/tumblr(.:format)" => "lakers#tumblr"
+
+    # Routes to youtube feed
+    get "/lakers/youtube(.:format)" => "lakers#youtube"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

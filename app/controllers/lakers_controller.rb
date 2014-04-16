@@ -26,11 +26,15 @@ class LakersController < ApplicationController
     Tumblr.configure do |config|
       config.consumer_key = ENV["TUMBLR_KEY"]
       config.consumer_secret = ENV["TUMBLR_SECRET"]
-      # config.oauth_token = "access_token"
-      # config.oauth_token_secret = "access_token_secret"
     end
     client = Tumblr::Client.new(:client => :httpclient)
     render json: client.posts("lakers.tumblr.com", :limit => 7)
+  end
+
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:title => {:include => 'lakers'}, :user => 'nba')
+
   end
 
   def api

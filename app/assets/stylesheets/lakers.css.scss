@@ -2,11 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$base-color: #400080;
+$base-color: #061638;
+$shadow: 1px 1px 1px #000;
 
 .lakers-headline {
-  border-top: 1px solid $base-color;
-  border-bottom: 1px solid $base-color;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
   color: $base-color;
   font-size: 30px;
   font-weight: bold;
@@ -16,14 +17,13 @@ $base-color: #400080;
 .instagram {
   float: left;
   margin: 5px;
-  box-shadow: 1px 1px 1px #000;
+  box-shadow: $shadow;
 }
 
 .tumblr {
   float: left;
-
-  margin: 5px 0 0 20px;
-  box-shadow: 1px 1px 1px #000;
+  margin: 5px 0 5px 22px;
+  box-shadow: $shadow;
   img {
     width: auto;
     height: 150px;

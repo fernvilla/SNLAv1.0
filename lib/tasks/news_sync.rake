@@ -17,21 +17,21 @@ require 'fox_sports_importer'
 namespace :news_sync do
   desc 'sync new stories'
   task :news => :environment do
-    # EspnImporter.import_espn
-    # OfficialSiteImporter.import_official_news
-    # LATimesImporter.import_la_times
-    # OCRegisterImporter.import_oc_register
-    # CBSImporter.import_cbs
-    # GalaxyImporter.import_blogs
-    # ChivasImporter.import_blogs
-    # DucksImporter.import_blogs
-    # BruinsImporter.import_blogs
-    # TrojansImporter.import_blogs
-    # BleacherReportImporter.import_bleacher_report
-    # LakersImporter.import_blogs
-    # LASportsHubImporter.import_la_sports_hub
+    EspnImporter.import_espn
+    OfficialSiteImporter.import_official_news
+    LATimesImporter.import_la_times
+    OCRegisterImporter.import_oc_register
+    CBSImporter.import_cbs
+    GalaxyImporter.import_blogs
+    ChivasImporter.import_blogs
+    DucksImporter.import_blogs
+    BruinsImporter.import_blogs
+    TrojansImporter.import_blogs
+    BleacherReportImporter.import_bleacher_report
+    LakersImporter.import_blogs
+    LASportsHubImporter.import_la_sports_hub
     FoxSportsImporter.import_fox_sports
-    # DailyNewsImporter.import_daily_news
+    DailyNewsImporter.import_daily_news
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

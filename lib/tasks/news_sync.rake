@@ -12,6 +12,7 @@ require 'trojans_blogs_importer'
 require 'bleacher_report_importer'
 require 'lakers_blogs_importer'
 require 'la_sports_hub_importer'
+require 'fox_sports_importer'
 
 namespace :news_sync do
   desc 'sync new stories'
@@ -29,6 +30,7 @@ namespace :news_sync do
     BleacherReportImporter.import_bleacher_report
     LakersImporter.import_blogs
     LASportsHubImporter.import_la_sports_hub
+    FoxSportsImporter.import_fox_sports
     DailyNewsImporter.import_daily_news
 
     puts "There are now #{Laker.count} Lakers stories."

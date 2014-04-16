@@ -32,6 +32,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -45,6 +46,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -57,6 +59,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -70,6 +73,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -82,6 +86,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -95,6 +100,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -107,6 +113,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -120,6 +127,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -132,6 +140,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -145,6 +154,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -157,6 +167,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -170,6 +181,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -182,6 +194,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -195,6 +208,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -207,6 +221,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -220,6 +235,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -232,6 +248,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -244,6 +261,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -256,6 +274,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -268,6 +287,7 @@ class EspnImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end

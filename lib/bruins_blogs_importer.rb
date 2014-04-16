@@ -18,6 +18,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Inside UCLA"
       )
     end
@@ -29,6 +30,7 @@ class BruinsImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Bruins Nation"
       )
     end
@@ -41,6 +43,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Punting is Winning"
       )
     end
@@ -53,6 +56,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Go Joe Bruin"
       )
     end
@@ -65,6 +69,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Bruin 247"
       )
     end
@@ -77,6 +82,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Rivals"
       )
     end
@@ -89,6 +95,7 @@ class BruinsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Scout"
       )
     end

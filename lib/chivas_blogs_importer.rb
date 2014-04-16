@@ -11,6 +11,7 @@ class ChivasImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "The Goat Parade"
       )
     end

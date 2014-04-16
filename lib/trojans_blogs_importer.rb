@@ -15,6 +15,7 @@ class TrojansImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Inside USC"
       )
     end
@@ -27,6 +28,7 @@ class TrojansImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Conquest Chronicles"
       )
     end
@@ -39,6 +41,7 @@ class TrojansImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Rivals"
       )
     end
@@ -51,6 +54,7 @@ class TrojansImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Scout"
       )
     end

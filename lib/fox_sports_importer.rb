@@ -1,9 +1,9 @@
 require 'feedjira'
 
-class LASportsHubImporter
-  def self.import_la_sports_hub
-    source = "LA Sports Hub"
-    lakers_feed = Feedjira::Feed.fetch_and_parse("http://lasportshub.com/category/lakers/feed/")
+class FoxSportsImporter
+  def self.import_fox_sports
+    source = "FOX Sports"
+    lakers_feed = Feedjira::Feed.fetch_and_parse("http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=71087")
 
     lakers_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')

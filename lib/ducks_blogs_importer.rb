@@ -12,6 +12,7 @@ class DucksImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Anaheim Calling"
       )
     end
@@ -24,6 +25,7 @@ class DucksImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "On the Duck Pond"
       )
     end

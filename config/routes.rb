@@ -136,6 +136,9 @@ SportsNewsLA::Application.routes.draw do
     get "/chivas/bleacher_report(.:format)" => "chivas#bleacher_report"
     get "/galaxy/bleacher_report(.:format)" => "galaxies#bleacher_report"
 
+    # Routes to stories from Fox Sports
+    get "/lakers/fox_sports(.:format)" => "lakers#fox_sports"
+
     # Routes to stories from LA Sports Hub
     get "/lakers/la_sports_hub(.:format)" => "lakers#la_sports_hub"
 

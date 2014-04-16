@@ -104,4 +104,8 @@ class LakersController < ApplicationController
   def fansided
     render json: Laker.where(source: "Fansided")
   end
+
+  def fox_sports
+    render json: Laker.where(source: "FOX Sports")
+  end
 end

@@ -24,6 +24,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -36,6 +37,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        # image:      entry.image,
         source:     source
       )
     end
@@ -48,6 +50,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -60,6 +63,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        # image:      entry.image,
         source:     source
       )
     end
@@ -72,6 +76,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -84,6 +89,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -96,6 +102,7 @@ class OfficialSiteImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -110,6 +117,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -122,6 +130,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -134,6 +143,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        # image:      entry.image,
         source:     source
       )
     end
@@ -146,6 +156,7 @@ class OfficialSiteImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end

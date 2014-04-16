@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140413211754) do
+ActiveRecord::Schema.define(version: 20140416053358) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "bruins", force: true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "chivas", force: true do |t|
@@ -47,6 +49,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "clippers", force: true do |t|
@@ -58,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "dodgers", force: true do |t|
@@ -69,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "ducks", force: true do |t|
@@ -80,6 +85,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "galaxies", force: true do |t|
@@ -91,6 +97,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "kings", force: true do |t|
@@ -102,6 +109,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "lakers", force: true do |t|
@@ -113,6 +121,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "preps", force: true do |t|
@@ -124,6 +133,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "sparks", force: true do |t|
@@ -135,6 +145,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "trojans", force: true do |t|
@@ -146,6 +157,7 @@ ActiveRecord::Schema.define(version: 20140413211754) do
     t.string   "source"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image"
   end
 
   create_table "users", force: true do |t|

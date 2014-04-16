@@ -24,6 +24,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -36,6 +37,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -48,6 +50,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -60,6 +63,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -72,6 +76,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -84,6 +89,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -96,6 +102,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -108,6 +115,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -120,6 +128,7 @@ class LATimesImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -132,6 +141,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -144,6 +154,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -156,6 +167,7 @@ class LATimesImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end

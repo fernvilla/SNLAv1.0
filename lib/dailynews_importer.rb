@@ -19,6 +19,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -31,6 +32,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -43,6 +45,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -55,6 +58,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -67,6 +71,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -79,6 +84,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end
@@ -91,6 +97,7 @@ class DailyNewsImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     source
       )
     end

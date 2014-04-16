@@ -13,6 +13,7 @@ class GalaxyImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "LAG Confidential"
       )
     end
@@ -25,6 +26,7 @@ class GalaxyImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Corner of the Galaxy"
       )
     end

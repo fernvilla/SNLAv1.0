@@ -22,6 +22,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Inside the Lakers"
       )
     end
@@ -34,6 +35,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lakers Nation"
       )
     end
@@ -46,6 +48,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Forum Blue and Gold"
       )
     end
@@ -57,6 +60,7 @@ class LakersImporter
         summary:    entry.summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Silver Screen and Roll"
       )
     end
@@ -69,6 +73,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Laker Nation"
       )
     end
@@ -81,6 +86,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lakerholicz"
       )
     end
@@ -93,6 +99,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lake Show Life"
       )
     end
@@ -105,6 +112,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lake Show Life"
       )
     end
@@ -117,6 +125,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lake Show Life"
       )
     end
@@ -129,6 +138,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Lake Show Life"
       )
     end
@@ -141,6 +151,7 @@ class LakersImporter
         summary:    summary,
         published:  entry.published,
         url:        entry.url,
+        image:      entry.image,
         source:     "Fansided"
       )
     end

@@ -33,7 +33,7 @@ gem 'ngmin-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-# gem 'masonry-rails'
+gem 'angular-ui-bootstrap-rails'
 
 # Heroku
 gem 'rails_12factor'

@@ -10,7 +10,7 @@
       <div class="team-header">Official Site</div>
       <div ng-repeat="story in official | orderBy: '-published' | limitTo: 14">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -19,7 +19,7 @@
       <div class="team-header">ESPN</div>
       <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 12">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -28,7 +28,7 @@
       <div class="team-header">Los Angeles Times</div>
       <div ng-repeat="story in latimes | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <div class="team-header">Orange County Register</div>
       <div ng-repeat="story in ocregister | orderBy: '-published' | limitTo: 11">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -77,7 +77,7 @@
       <div class="team-header">Daily News</div>
       <div ng-repeat="story in dailynews | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -86,7 +86,7 @@
       <div class="team-header">CBS Los Angeles</div>
       <div ng-repeat="story in cbs | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -95,7 +95,7 @@
       <div class="team-header">Bleacher Report</div>
       <div ng-repeat="story in bleacher_report | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -104,7 +104,7 @@
       <div class="team-header">Inside The Lakers</div>
       <div ng-repeat="story in inside_the_lakers | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -133,7 +133,7 @@
       <div class="team-header">Fox Sports</div>
       <div ng-repeat="story in fox_sports | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -142,7 +142,7 @@
       <div class="team-header">Hoops Hype</div>
       <div ng-repeat="story in hoops_hype | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -151,7 +151,7 @@
       <div class="team-header">NBA Power Rankings</div>
       <div ng-repeat="story in nba | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -160,7 +160,7 @@
       <div class="team-header">Fansided</div>
       <div ng-repeat="story in fansided | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -172,7 +172,7 @@
       <div class="team-header">Lakers Nation</div>
       <div ng-repeat="story in lakers_nation | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -181,7 +181,7 @@
       <div class="team-header">Forum Blue And Gold</div>
       <div ng-repeat="story in forum_blue_and_gold | orderBy: '-published' | limitTo: 14">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -190,7 +190,7 @@
       <div class="team-header">Silver Screen and Roll</div>
       <div ng-repeat="story in silver_screen_and_roll | orderBy: '-published' | limitTo: 11">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -199,7 +199,7 @@
       <div class="team-header">Laker Nation</div>
       <div ng-repeat="story in laker_nation | orderBy: '-published' | limitTo: 12">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -211,7 +211,7 @@
       <div class="team-header">Lakerholicz</div>
       <div ng-repeat="story in lakerholicz | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -220,7 +220,7 @@
       <div class="team-header">Lake Show Life</div>
       <div ng-repeat="story in lake_show_life | orderBy: '-published' | limitTo: 12">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -229,7 +229,7 @@
       <div class="team-header">LA Sports Hub</div>
       <div ng-repeat="story in la_sports_hub | orderBy: '-published' | limitTo: 13">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -238,7 +238,7 @@
       <div class="team-header">Triple Threat</div>
       <div ng-repeat="story in triple_threat | orderBy: '-published' | limitTo: 13">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>

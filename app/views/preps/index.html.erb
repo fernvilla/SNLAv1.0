@@ -10,7 +10,7 @@
       Search Stories: <input ng-model="searchStory"><br><br>
       <div ng-repeat="story in stories | orderBy:'-published' |filter:searchStory">
         <p class="story">
-          <a href="{{story.url}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
         </p>
       </div>

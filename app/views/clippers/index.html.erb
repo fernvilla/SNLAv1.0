@@ -10,7 +10,7 @@
       <div class="team-header">Official Site</div>
       <div ng-repeat="story in official | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -19,7 +19,7 @@
       <div class="team-header">ESPN</div>
       <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 13">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -28,7 +28,7 @@
       <div class="team-header">Los Angeles Times</div>
       <div ng-repeat="story in latimes | orderBy: '-published' | limitTo: 10">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <div class="team-header">Orange County Register</div>
       <div ng-repeat="story in ocregister | orderBy: '-published' | limitTo: 11">
         <div class="story">
-          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
         </div>
       </div>

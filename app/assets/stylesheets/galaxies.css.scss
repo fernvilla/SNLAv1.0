@@ -1,3 +1,15 @@
 // Place all the styles related to the galaxies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$base-color: #061638;
+$shadow: 1px 1px 1px #000;
+
+.galaxy-headline {
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  color: $base-color;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

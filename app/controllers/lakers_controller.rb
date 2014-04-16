@@ -28,7 +28,7 @@ class LakersController < ApplicationController
       config.consumer_secret = ENV["TUMBLR_SECRET"]
     end
     client = Tumblr::Client.new(:client => :httpclient)
-    render json: client.posts("lakers.tumblr.com", :limit => 7)
+    render json: client.posts("lakers.tumblr.com", :limit => 14)
   end
 
   def youtube

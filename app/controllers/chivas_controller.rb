@@ -34,6 +34,10 @@ class ChivasController < ApplicationController
     render json: Chiva.where(source: "ESPN")
   end
 
+  def latimes
+    render json: Chiva.where(source: "LA Times")
+  end
+
   def the_goat_parade
     render json: Chiva.where(source: "The Goat Parade")
   end

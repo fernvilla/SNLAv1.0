@@ -34,6 +34,10 @@ class GalaxiesController < ApplicationController
     render json: Galaxy.where(source: "ESPN")
   end
 
+  def latimes
+    render json: Galaxy.where(source: "LA Times")
+  end
+
   def lag_confidential
     render json: Galaxy.where(source: "LAG Confidential")
   end

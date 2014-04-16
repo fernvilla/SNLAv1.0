@@ -91,6 +91,8 @@ SportsNewsLA::Application.routes.draw do
     get "/preps/latimes(.:format)" => "preps#latimes"
     get "/angels/latimes(.:format)" => "angels#latimes"
     get "/ducks/latimes(.:format)" => "ducks#latimes"
+    get "/chivas/latimes(.:format)" => "chivas#latimes"
+    get "/galaxy/latimes(.:format)" => "galaxies#latimes"
 
     # Routes to stories from ESPN
     get "/lakers/espn(.:format)" => "lakers#espn"

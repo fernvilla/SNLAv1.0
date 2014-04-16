@@ -122,6 +122,19 @@ class OfficialSiteImporter
       )
     end
 
+    bruins_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Bruin.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     source
+      )
+    end
+
     ducks_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Duck.where(url: entry.url).first_or_create(

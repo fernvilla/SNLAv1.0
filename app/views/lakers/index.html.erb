@@ -17,7 +17,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">ESPN</div>
-      <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 13">
+      <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 12">
         <div class="story">
           <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>

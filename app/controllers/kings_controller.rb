@@ -13,6 +13,15 @@ class KingsController < ApplicationController
     render json: client.user_timeline('lakings')
   end
 
+  def instagram
+    Instagram.configure do |config|
+     config.client_id = ENV["INSTAGRAM_KEY"]
+     config.client_secret = ENV["INSTAGRAM_SECRET"] 
+     config.access_token = ENV["INSTAGRAM_ACCESS_TOKEN"]
+    end
+    render json: Instagram.user_recent_media(12278927)
+  end
+
   def api
     render json: King.all
   end

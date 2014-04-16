@@ -18,17 +18,17 @@ class GalaxyImporter
       )
     end
 
-    corner_of_the_galaxy.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Galaxy.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Corner of the Galaxy"
-      )
-    end
+    # corner_of_the_galaxy.entries.each do |entry|
+    #   summary = entry.summary.gsub(/<[^>]*>/, '')
+    #   Galaxy.where(url: entry.url).first_or_create(
+    #     title:      entry.title,
+    #     author:     entry.author,
+    #     summary:    summary,
+    #     published:  entry.published,
+    #     url:        entry.url,
+    #     image:      entry.image,
+    #     source:     "Corner of the Galaxy"
+    #   )
+    # end
   end
 end

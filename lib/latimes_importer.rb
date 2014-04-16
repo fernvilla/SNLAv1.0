@@ -15,6 +15,7 @@ class LATimesImporter
     preps_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/highschool/rss2.0.xml")
     preps_feed_two = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/varsity-times/rss2.0.xml")
     angels_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/sports/baseball/mlb/angels/rss2.0.xml")
+    ducks_feed = Feedjira::Feed.fetch_and_parse("http://www.latimes.com/rss/topic/sports/ice-hockey/anaheim-ducks-ORSPT000063.topic")
 
     lakers_feed.entries.each do |entry|
     summary = entry.summary.gsub(/<[^>]*>/, '')
@@ -162,6 +163,19 @@ class LATimesImporter
     angels_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Angel.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     source
+      )
+    end
+
+    ducks_feed.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Duck.where(url: entry.url).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,

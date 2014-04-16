@@ -4,6 +4,10 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.stories = stories.data;
     }
   );
+
+  $scope.addFavorite = function(id) {
+    console.log(id)
+  }
 }]);
 
 App.controller('LakersHomeCtrl', ['$scope', '$http', function($scope, $http) {

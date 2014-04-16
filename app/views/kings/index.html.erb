@@ -4,26 +4,70 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="KingsHomeCtrl">
   <div class="row">
-    <div class=" col-sm-5 col-md-5" ng-controller="KingsCtrl" >
-      Search Stories: <input ng-model="searchStory"><br><br>
-      <div ng-repeat="story in stories | orderBy:'-published' |filter:searchStory">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Official Site</div>
+      <div ng-repeat="story in official | orderBy: '-published' | limitTo: 12">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">ESPN</div>
+      <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 12">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Los Angeles Times</div>
+      <div ng-repeat="story in latimes | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Orange County Register</div>
+      <div ng-repeat="story in ocregister | orderBy: '-published' | limitTo: 12">
+        <div class="story">
+          <a href="{{story.url}}" title="{{story.summary}}" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Twitter and Instagram -->
+  <div class="row">
+    <div class="col-sm-6 col-md-6" ng-controller="KingsTweetsCtrl" >
+      <div class="team-header">
+        <i class="fa fa-twitter"></i>
+        <a href="http://twitter.com/lakings" target="blank"> Twitter Feed</a>
+      </div>
+      <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
-          <a href="{{story.url}}" target="blank">{{story.title}}</a>
-          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
+          <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a>
+          <span class="source">({{tweet.created_at | date: 'short'}})</span>
         </p>
       </div>
     </div>
-
-    <div class="col-sm-7 col-md-7" ng-controller="KingsTweetsCtrl" >
-      Search Tweets: <input ng-model="searchTweet"><br><br>
-      <div ng-repeat="tweet in tweets |  filter: searchTweet">
-        <p class="tweet">
-          <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a><br>
-          <span class="source">({{tweet.created_at}})</span>
+    <div class="col-sm-6 col-md-6" ng-controller="KingsInstagramCtrl" >
+      <div class="team-header">
+        <i class="fa fa-instagram"></i>
+        <a href="http://instagram.com/lakings" target="blank"> Instagram Feed</a>
+      </div>
+      <div ng-repeat="image in instagram | limitTo: 12">
+        <p class="instagram">
+          <a href="{{image.link}}" target="blank"><img src="{{image.images.thumbnail.url}}" alt="{{image.caption.text}}" title="{{image.caption.text}}"></a>
         </p>
       </div>
     </div>
   </div>
-</div>
+  <!-- End Twitter and Instagram -->

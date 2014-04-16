@@ -1,7 +1,7 @@
 SportsNewsLA::Application.routes.draw do
   root "home#index"
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"}
+  devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
   
   get "favorites" => "favorites#index"
   get "api/favorites" => "favorites#api"
@@ -51,12 +51,21 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to instagram feed
     get "/lakers/instagram(.:format)" => "lakers#instagram"
+    get "/clippers/instagram(.:format)" => "clippers#instagram"
+    get "/dodgers/instagram(.:format)" => "dodgers#instagram"
+    get "/angels/instagram(.:format)" => "angels#instagram"
+    get "/kings/instagram(.:format)" => "kings#instagram"
+    get "/ducks/instagram(.:format)" => "ducks#instagram"
+    get "/bruins/instagram(.:format)" => "bruins#instagram"
+    get "/trojans/instagram(.:format)" => "trojans#instagram"
+    get "/sparks/instagram(.:format)" => "sparks#instagram"
+    get "/galaxy/instagram(.:format)" => "galaxies#instagram"
+    get "/chivas/instagram(.:format)" => "chivas#instagram"
 
     # Routes to tumblr feed
     get "/lakers/tumblr(.:format)" => "lakers#tumblr"
 
     # Routes to youtube feed
-    get "/lakers/youtube(.:format)" => "lakers#youtube"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"
@@ -81,6 +90,7 @@ SportsNewsLA::Application.routes.draw do
     get "/sparks/latimes(.:format)" => "sparks#latimes"
     get "/preps/latimes(.:format)" => "preps#latimes"
     get "/angels/latimes(.:format)" => "angels#latimes"
+    get "/ducks/latimes(.:format)" => "ducks#latimes"
 
     # Routes to stories from ESPN
     get "/lakers/espn(.:format)" => "lakers#espn"

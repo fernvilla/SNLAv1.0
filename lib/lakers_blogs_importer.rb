@@ -13,6 +13,10 @@ class LakersImporter
     lake_show_life_three = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/category/lakers-2/feed/")
     lake_show_life_four = Feedjira::Feed.fetch_and_parse("http://lakeshowlife.com/category/lakers/recaps/feed/")
     fansided = Feedjira::Feed.fetch_and_parse("http://fansided.com/tag/los-angeles-lakers/feed/")
+    hoops_hype = Feedjira::Feed.fetch_and_parse("http://feeds.hoopshype.com/xml/rumors/tag/los_angeles_lakers.xml")
+    nba_power_rankings = Feedjira::Feed.fetch_and_parse("http://www.nba.com/powerrankings/rss.xml")
+    laker_liker = Feedjira::Feed.fetch_and_parse("http://www.nba.com/powerrankings/rss.xml")
+    triple_threat = Feedjira::Feed.fetch_and_parse("http://www.nbclosangeles.com/blogs/triple-threat/?rss=y")
 
     inside_the_lakers.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
@@ -153,6 +157,45 @@ class LakersImporter
         url:        entry.url,
         image:      entry.image,
         source:     "Fansided"
+      )
+    end
+
+      hoops_hype.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(title: entry.title).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "Hoops Hype"
+      )
+    end
+
+     nba_power_rankings.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "NBA.com"
+      )
+    end
+
+    triple_threat.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "Triple Threat"
       )
     end
   end

@@ -69,6 +69,7 @@ SportsNewsLA::Application.routes.draw do
     get "/ducks/official(.:format)" => "ducks#official" 
     get "/angels/official(.:format)" => "angels#official" 
     get "/trojans/official(.:format)" => "trojans#official" 
+    get "/lakers/nba(.:format)" => "lakers#nba" 
 
     # Routes to stories from LA Times
     get "/lakers/latimes(.:format)" => "lakers#latimes"
@@ -159,6 +160,8 @@ SportsNewsLA::Application.routes.draw do
     get "/lakers/lakerholicz(.:format)" => "lakers#lakerholicz"
     get "/lakers/lake_show_life(.:format)" => "lakers#lake_show_life"
     get "/lakers/fansided(.:format)" => "lakers#fansided"
+    get "/lakers/hoops_hype(.:format)" => "lakers#hoops_hype"
+    get "/lakers/triple_threat(.:format)" => "lakers#triple_threat"
 
     # Routes to Galaxy blogs
     get "/galaxy/lag_confidential(.:format)" => "galaxies#lag_confidential"

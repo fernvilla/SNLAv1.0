@@ -15,7 +15,7 @@ require 'la_sports_hub_importer'
 require 'fox_sports_importer'
 
 namespace :news_sync do
-  desc 'sync new stories'
+  desc 'sync news stories'
   task :news => :environment do
     EspnImporter.import_espn
     OfficialSiteImporter.import_official_news

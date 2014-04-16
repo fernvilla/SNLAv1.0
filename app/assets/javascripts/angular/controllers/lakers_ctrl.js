@@ -87,6 +87,26 @@ App.controller('LakersHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.fansided = fansided.data;
     }
   );
+  $http.get('/api/lakers/fox_sports.json').then(
+    function(fox_sports){
+      $scope.fox_sports = fox_sports.data;
+    }
+  );
+  $http.get('/api/lakers/hoops_hype.json').then(
+    function(hoops_hype){
+      $scope.hoops_hype = hoops_hype.data;
+    }
+  );
+  $http.get('/api/lakers/nba.json').then(
+    function(nba){
+      $scope.nba = nba.data;
+    }
+  );
+  $http.get('/api/lakers/triple_threat.json').then(
+    function(triple_threat){
+      $scope.triple_threat = triple_threat.data;
+    }
+  );
 }]);
 
 App.controller('LakersTweetsCtrl', ['$scope', '$http', function($scope, $http) {

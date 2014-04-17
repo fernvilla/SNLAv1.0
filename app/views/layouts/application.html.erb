@@ -3,7 +3,6 @@
 <head>
   <title>Sports News Los Angeles</title>
   <%= stylesheet_link_tag    "application"%>
-  <%= javascript_include_tag "application"%>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,7 +70,6 @@
   
   <%= yield %>
   
-  <!-- <div id="sub-bar"></div> -->
-  <!-- <footer></footer> -->
+  <%= javascript_include_tag "application"%>
 </body>
 </html>

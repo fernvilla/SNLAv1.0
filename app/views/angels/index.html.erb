@@ -65,7 +65,7 @@
       </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">
-          <a href="{{image.link}}" target="blank"><img src="{{image.images.thumbnail.url}}" alt="{{image.caption.text}}" title="{{image.caption.text}}"></a>
+          <a href="{{image.link}}" target="blank"><img ng-src="{{image.images.thumbnail.url}}" alt="{{image.caption.text}}" title="{{image.caption.text}}"></a>
         </p>
       </div>
     </div>

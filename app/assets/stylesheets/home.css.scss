@@ -35,7 +35,7 @@ body {
   background-color: #22376b;
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 3px 3px 5px #000;
   background-image: url('jumbo.jpg');
 }
 
@@ -43,7 +43,7 @@ body {
   width: 100%;
   height: auto;
   box-shadow: $shadow;
-  border: 1px solid $base-color;
+  border: 1px outset #bababa;
 }
 
 .notice {

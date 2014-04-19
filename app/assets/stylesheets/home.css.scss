@@ -23,12 +23,27 @@ $shadow: 1px 1px 1px #000;
 #sub-bar {
   background-color: #b3b3b3;
   height: 10px;
-  margin-bottom: 15px;
 }
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
   padding-bottom: 40px;
+}
+
+.jumbotron {
+  height: 100%;
+  background-color: #22376b;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+  background-image: url('jumbo.jpg');
+}
+
+.home-image {
+  width: 100%;
+  height: auto;
+  box-shadow: $shadow;
+  border: 1px solid $base-color;
 }
 
 .notice {
@@ -124,7 +139,7 @@ body {
 }
 
 #title {
-  font-size: 22px;
+  font-size: 25px;
   font-family: $font;
   color: #fff;
   text-shadow: 1px 1px 1px #000;

@@ -22,9 +22,19 @@ App.controller('GalaxyHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.latimes = latimes.data;
     }
   );
-  $http.get('/api/galaxy/ocregister.json').then(
-    function(ocregister){
-      $scope.ocregister = ocregister.data;
+  $http.get('/api/galaxy/bleacher_report.json').then(
+    function(bleacher_report){
+      $scope.bleacher_report = bleacher_report.data;
+    }
+  );
+  $http.get('/api/galaxy/lag_confidential.json').then(
+    function(lag_confidential){
+      $scope.lag_confidential = lag_confidential.data;
+    }
+  );
+  $http.get('/api/galaxy/corner_of_the_galaxy.json').then(
+    function(corner_of_the_galaxy){
+      $scope.corner_of_the_galaxy = corner_of_the_galaxy.data;
     }
   );
 }]);

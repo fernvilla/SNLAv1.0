@@ -42,6 +42,14 @@ class TrojansController < ApplicationController
     render json: Trojan.where(source: "OC Register")
   end
 
+  def bleacher_report
+    render json: Trojan.where(source: "Bleacher Report")
+  end
+
+  def fox_sports
+    render json: Trojan.where(source: "FOX Sports")
+  end
+
   def inside_usc
     render json: Trojan.where(source: "Inside USC")
   end
@@ -56,13 +64,5 @@ class TrojansController < ApplicationController
 
   def scout
     render json: Trojan.where(source: "Scout")
-  end
-
-  def bleacher_report
-    render json: Trojan.where(source: "Bleacher Report")
-  end
-
-  def fox_sports
-    render json: Trojan.where(source: "FOX Sports")
   end
 end

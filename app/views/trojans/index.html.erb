@@ -71,3 +71,82 @@
     </div>
   </div>
   <!-- End Twitter and Instagram -->
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Bleacher Report</div>
+      <div ng-repeat="story in bleacher_report | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">FOX Sports</div>
+      <div ng-repeat="story in fox_sports | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Inside USC</div>
+      <div ng-repeat="story in inside_usc | orderBy: '-published' | limitTo: 12">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Conquest Chronicles</div>
+      <div ng-repeat="story in conquest_chronicles | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Scout</div>
+      <div ng-repeat="story in scout | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Rivals</div>
+      <div ng-repeat="story in rivals | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Inside USC</div>
+      <div ng-repeat="story in inside_usc | orderBy: '-published' | limitTo: 12">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Conquest Chronicles</div>
+      <div ng-repeat="story in conquest_chronicles | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>

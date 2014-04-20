@@ -27,6 +27,26 @@ App.controller('KingsHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.ocregister = ocregister.data;
     }
   );
+  $http.get('/api/kings/dailynews.json').then(
+    function(dailynews){
+      $scope.dailynews = dailynews.data;
+    }
+  );
+  $http.get('/api/kings/cbs.json').then(
+    function(cbs){
+      $scope.cbs = cbs.data;
+    }
+  );
+  $http.get('/api/kings/bleacher_report.json').then(
+    function(bleacher_report){
+      $scope.bleacher_report = bleacher_report.data;
+    }
+  );
+  $http.get('/api/kings/fox_sports.json').then(
+    function(fox_sports){
+      $scope.fox_sports = fox_sports.data;
+    }
+  );
 }]);
 
 App.controller('KingsTweetsCtrl', ['$scope', '$http', function($scope, $http) {

@@ -11,6 +11,16 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
 }]);
 
 App.controller('LakersHomeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/lakers.json').then(
+    function(stories){
+      $scope.havePics = [];
+      for (var i = 0; i < stories.data.length; i++) {
+        if (stories.data[i].image) {
+          $scope.havePics.push(stories.data[i]);
+        }
+      };
+    }
+  );
   $http.get('/api/lakers/official.json').then(
     function(official){
       $scope.official = official.data;

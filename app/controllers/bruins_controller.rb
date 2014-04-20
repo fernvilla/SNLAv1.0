@@ -42,6 +42,14 @@ class BruinsController < ApplicationController
     render json: Bruin.where(source: "OC Register")
   end
 
+  def bleacher_report
+    render json: Bruin.where(source: "Bleacher Report")
+  end
+
+  def fox_sports
+    render json: Bruin.where(source: "FOX Sports")
+  end
+
   def inside_ucla
     render json: Bruin.where(source: "Inside UCLA")
   end
@@ -70,11 +78,4 @@ class BruinsController < ApplicationController
     render json: Bruin.where(source: "Scout")
   end
 
-  def bleacher_report
-    render json: Bruin.where(source: "Bleacher Report")
-  end
-
-  def fox_sports
-    render json: Bruin.where(source: "FOX Sports")
-  end
 end

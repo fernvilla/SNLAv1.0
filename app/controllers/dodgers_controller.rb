@@ -22,6 +22,15 @@ class DodgersController < ApplicationController
     render json: Instagram.user_recent_media(46782831)
   end
 
+  def tumblr
+    Tumblr.configure do |config|
+      config.consumer_key = ENV["TUMBLR_KEY"]
+      config.consumer_secret = ENV["TUMBLR_SECRET"]
+    end
+    client = Tumblr::Client.new(:client => :httpclient)
+    render json: client.posts("ladodgers.tumblr.com", :limit => 9)
+  end
+
   def api
     render json: Dodger.all
   end

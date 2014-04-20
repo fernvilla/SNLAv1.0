@@ -22,6 +22,15 @@ class DucksController < ApplicationController
     render json: Instagram.user_recent_media(178233007)
   end
 
+  def tumblr
+    Tumblr.configure do |config|
+      config.consumer_key = ENV["TUMBLR_KEY"]
+      config.consumer_secret = ENV["TUMBLR_SECRET"]
+    end
+    client = Tumblr::Client.new(:client => :httpclient)
+    render json: client.posts("anaheimducks.tumblr.com", :limit => 10)
+  end
+
   def api
     render json: Duck.all
   end
@@ -46,23 +55,23 @@ class DucksController < ApplicationController
     render json: Duck.where(source: "Daily News")
   end
 
-  def cbs
-    render json: Duck.where(source: "CBS Los Angeles")
-  end
-
-  def anaheim_calling
-    render json: Duck.where(source: "Anaheim Calling")
-  end
-
-  def on_the_duck_pond
-    render json: Duck.where(source: "On the Duck Pond")
-  end
-
   def bleacher_report
     render json: Duck.where(source: "Bleacher Report")
   end
 
   def fox_sports
     render json: Duck.where(source: "FOX Sports")
+  end
+
+  def cbs
+    render json: Duck.where(source: "CBS Los Angeles")
+  end
+
+  def on_the_duck_pond
+    render json: Duck.where(source: "On the Duck Pond")
+  end
+
+  def anaheim_calling
+    render json: Duck.where(source: "Anaheim Calling")
   end
 end

@@ -4,15 +4,42 @@
   </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="PrepsHomeCtrl">
   <div class="row">
-    <div class=" col-sm-5 col-md-5" ng-controller="PrepsCtrl" >
-      Search Stories: <input ng-model="searchStory"><br><br>
-      <div ng-repeat="story in stories | orderBy:'-published' |filter:searchStory">
-        <p class="story">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Los Angeles Times</div>
+      <div ng-repeat="story in latimes | orderBy: '-published' | limitTo: 10">
+        <div class="story">
           <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
-          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>
-        </p>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Daily News</div>
+      <div ng-repeat="story in dailynews | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">CBS Los Angeles</div>
+      <div ng-repeat="story in cbs   | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Orange County Register</div>
+      <div ng-repeat="story in ocregister | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
       </div>
     </div>
   </div>

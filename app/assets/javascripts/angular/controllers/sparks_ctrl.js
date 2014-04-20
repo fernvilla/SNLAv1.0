@@ -17,6 +17,11 @@ App.controller('SparksHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.latimes = latimes.data;
     }
   );
+  $http.get('/api/sparks/fox_sports.json').then(
+    function(fox_sports){
+      $scope.fox_sports = fox_sports.data;
+    }
+  );
 }]);
 
 

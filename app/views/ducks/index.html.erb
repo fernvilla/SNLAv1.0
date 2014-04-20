@@ -71,3 +71,42 @@
     </div>
   </div>
   <!-- End Twitter and Instagram -->
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Daily News</div>
+      <div ng-repeat="story in dailynews | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">CBS Los Angeles</div>
+      <div ng-repeat="story in cbs | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Bleacher Report</div>
+      <div ng-repeat="story in bleacher_report | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">FOX Sports</div>
+      <div ng-repeat="story in fox_sports | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -22,9 +22,14 @@ App.controller('ChivasHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.latimes = latimes.data;
     }
   );
-  $http.get('/api/chivas/ocregister.json').then(
-    function(ocregister){
-      $scope.ocregister = ocregister.data;
+  $http.get('/api/chivas/bleacher_report.json').then(
+    function(bleacher_report){
+      $scope.bleacher_report = bleacher_report.data;
+    }
+  );
+  $http.get('/api/chivas/the_goat_parade.json').then(
+    function(the_goat_parade){
+      $scope.the_goat_parade = the_goat_parade.data;
     }
   );
 }]);

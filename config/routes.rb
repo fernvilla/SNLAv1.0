@@ -64,6 +64,9 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to tumblr feed
     get "/lakers/tumblr(.:format)" => "lakers#tumblr"
+    get "/angels/tumblr(.:format)" => "angels#tumblr"
+    get "/dodgers/tumblr(.:format)" => "dodgers#tumblr"
+    get "/ducks/tumblr(.:format)" => "ducks#tumblr"
 
     # Routes to youtube feed
  

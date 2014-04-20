@@ -27,6 +27,36 @@ App.controller('TrojansHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.ocregister = ocregister.data;
     }
   );
+  $http.get('/api/trojans/bleacher_report.json').then(
+    function(bleacher_report){
+      $scope.bleacher_report = bleacher_report.data;
+    }
+  );
+  $http.get('/api/trojans/fox_sports.json').then(
+    function(fox_sports){
+      $scope.fox_sports = fox_sports.data;
+    }
+  );
+  $http.get('/api/trojans/inside_usc.json').then(
+    function(inside_usc){
+      $scope.inside_usc = inside_usc.data;
+    }
+  );
+  $http.get('/api/trojans/conquest_chronicles.json').then(
+    function(conquest_chronicles){
+      $scope.conquest_chronicles = conquest_chronicles.data;
+    }
+  );
+  $http.get('/api/trojans/scout.json').then(
+    function(scout){
+      $scope.scout = scout.data;
+    }
+  );
+  $http.get('/api/trojans/rivals.json').then(
+    function(rivals){
+      $scope.rivals = rivals.data;
+    }
+  );
 }]);
 
 App.controller('TrojansTweetsCtrl', ['$scope', '$http', function($scope, $http) {

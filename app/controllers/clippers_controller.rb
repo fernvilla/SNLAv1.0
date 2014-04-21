@@ -22,6 +22,11 @@ class ClippersController < ApplicationController
     render json: Instagram.user_recent_media(26987708)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'clippers1970')
+  end
+
   def api
     render json: Clipper.all
   end

@@ -70,6 +70,12 @@ SportsNewsLA::Application.routes.draw do
 
     # Routes to youtube feed
     get "/bruins/youtube(.:format)" => "bruins#youtube"
+    get "/clippers/youtube(.:format)" => "clippers#youtube"
+    get "/kings/youtube(.:format)" => "kings#youtube"
+    get "/ducks/youtube(.:format)" => "ducks#youtube"
+    get "/trojans/youtube(.:format)" => "trojans#youtube"
+    get "/galaxy/youtube(.:format)" => "galaxies#youtube"
+    get "/chivas/youtube(.:format)" => "chivas#youtube"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

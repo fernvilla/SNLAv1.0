@@ -64,3 +64,11 @@ App.controller('KingsInstagramCtrl', ['$scope', '$http', function($scope, $http)
     }
   );
 }]);
+
+App.controller('KingsYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/kings/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

@@ -74,3 +74,11 @@ App.controller('TrojansInstagramCtrl', ['$scope', '$http', function($scope, $htt
     }
   );
 }]);
+
+App.controller('TrojansYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/trojans/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

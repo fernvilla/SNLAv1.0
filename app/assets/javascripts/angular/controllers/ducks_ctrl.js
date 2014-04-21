@@ -72,3 +72,11 @@ App.controller('DucksTumblrCtrl', ['$scope', '$http', function($scope, $http) {
     }
   );
 }]);
+
+App.controller('DucksYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/ducks/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

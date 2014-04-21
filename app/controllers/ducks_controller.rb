@@ -22,13 +22,9 @@ class DucksController < ApplicationController
     render json: Instagram.user_recent_media(178233007)
   end
 
-  def tumblr
-    Tumblr.configure do |config|
-      config.consumer_key = ENV["TUMBLR_KEY"]
-      config.consumer_secret = ENV["TUMBLR_SECRET"]
-    end
-    client = Tumblr::Client.new(:client => :httpclient)
-    render json: client.posts("anaheimducks.tumblr.com", :limit => 10)
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'anaheimducksvideos')
   end
 
   def api

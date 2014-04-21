@@ -64,3 +64,11 @@ App.controller('ClippersInstagramCtrl', ['$scope', '$http', function($scope, $ht
     }
   );
 }]);
+
+App.controller('ClippersYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/clippers/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

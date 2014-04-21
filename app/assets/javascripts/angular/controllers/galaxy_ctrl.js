@@ -54,3 +54,11 @@ App.controller('GalaxyInstagramCtrl', ['$scope', '$http', function($scope, $http
     }
   );
 }]);
+
+App.controller('GalaxyYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/galaxy/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

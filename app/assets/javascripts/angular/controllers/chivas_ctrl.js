@@ -49,3 +49,11 @@ App.controller('ChivasInstagramCtrl', ['$scope', '$http', function($scope, $http
     }
   );
 }]);
+
+App.controller('ChivasYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/chivas/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

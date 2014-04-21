@@ -22,6 +22,11 @@ class TrojansController < ApplicationController
     render json: Instagram.user_recent_media(221439767)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'USCAthletics')
+  end
+
   def api
     render json: Trojan.all
   end

@@ -22,6 +22,11 @@ class KingsController < ApplicationController
     render json: Instagram.user_recent_media(12278927)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'kingsvision')
+  end
+
   def api
     render json: King.all
   end

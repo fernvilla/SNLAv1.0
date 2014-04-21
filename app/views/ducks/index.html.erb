@@ -124,3 +124,19 @@
       </div>
     </div>
   </div>
+  <!-- YouTube -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="DucksYoutubeCtrl" >
+      <div class="team-header">
+        <i class="fa fa-youtube"></i> 
+        <a href="http://www.youtube.com/user/anaheimducksvideos" target="blank"> YouTube Feed</a>
+      </div>
+      <div ng-repeat="video in youtube.videos | orderBy: '-published_at' | limitTo: 18">
+        <p class="youtube">
+          <a href="{{video.player_url}}" target="blank"><img ng-src="{{video.thumbnails[0].url}}" popover="({{video.published_at | date: 'short'}}) {{video.title | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End YouTube -->
+</div>

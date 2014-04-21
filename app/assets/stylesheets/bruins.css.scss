@@ -22,5 +22,6 @@ $shadow: 1px 1px 1px #000;
 .youtube {
   box-shadow: $shadow;
   float: left;
-  margin-left: 25px;
+  margin-left: 20px;
+  border: 3px solid $base-color;
 }

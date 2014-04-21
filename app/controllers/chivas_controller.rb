@@ -22,6 +22,11 @@ class ChivasController < ApplicationController
     render json: Instagram.user_recent_media(22040747)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'chivasusa1908')
+  end
+
   def api
     render json: Chiva.all
   end

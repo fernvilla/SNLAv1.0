@@ -167,9 +167,9 @@
         <i class="fa fa-youtube"></i> 
         <a href="http://www.youtube.com/channel/UCm3-NocWw8YDQ6lfOb78ehA" target="blank"> YouTube Feed</a>
       </div>
-      <div ng-repeat="video in youtube.videos | limitTo: 18">
+      <div ng-repeat="video in youtube.videos | orderBy: '-published_at' | limitTo: 18">
         <p class="youtube">
-          <a href="{{video.player_url}}" target="blank"><img ng-src="{{video.thumbnails[0].url}}" popover="{{video.title | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter"></a>
+          <a href="{{video.player_url}}" target="blank"><img ng-src="{{video.thumbnails[0].url}}" popover="({{video.published_at | date: 'short'}}) {{video.title | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter"></a>
         </p>
       </div>
     </div>

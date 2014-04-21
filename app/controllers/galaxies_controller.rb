@@ -22,6 +22,11 @@ class GalaxiesController < ApplicationController
     render json: Instagram.user_recent_media(20940324)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'TheLAGalaxy')
+  end
+
   def api
     render json: Galaxy.all
   end

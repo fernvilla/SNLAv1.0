@@ -1,6 +1,6 @@
 <div class="container-fluid" ng-controller="TrojansHomeCtrl">
   <div class="row">
-    <div class="col-sm-6 col-md-6">
+    <div class="col-md-12">
       <div class="row trojans-headline">
         <%= image_tag("trojans.gif") %> USC Trojans
       </div>
@@ -26,7 +26,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">ESPN</div>
-      <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 16">
+      <div ng-repeat="story in espn | orderBy: '-published' | limitTo: 13">
         <div class="story">
           <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
@@ -58,7 +58,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="TrojansTweetsCtrl" >
       <div class="team-header">
         <i class="fa fa-twitter"></i>
-        <a href="http://twitter.com/usc_athletics" target="blank"> Twitter Feed</a>
+        <a href="http://twitter.com/usc_athletics" target="blank"> Official Twitter Feed</a>
       </div>
       <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
@@ -70,7 +70,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="TrojansInstagramCtrl" >
       <div class="team-header">
         <i class="fa fa-instagram"></i>
-        <a href="http://instagram.com/usc_athletics" target="blank"> Instagram Feed</a>
+        <a href="http://instagram.com/usc_athletics" target="blank"> Official Instagram Feed</a>
       </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">
@@ -125,7 +125,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="TrojansYoutubeCtrl" >
       <div class="team-header">
         <i class="fa fa-youtube"></i> 
-        <a href="http://www.youtube.com/user/USCAthletics" target="blank"> YouTube Feed</a>
+        <a href="http://www.youtube.com/user/USCAthletics" target="blank"> Official YouTube Feed</a>
       </div>
       <div ng-repeat="video in youtube.videos | orderBy: '-published_at' | limitTo: 18">
         <p class="youtube">

@@ -1,6 +1,6 @@
 <div class="container-fluid" ng-controller="ChivasHomeCtrl">
   <div class="row">
-    <div class="col-sm-6 col-md-6">
+    <div class="col-md-12">
       <div class="row chivas-headline">
         <%= image_tag("chivas.gif") %> Chivas USA
       </div>
@@ -62,7 +62,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="ChivasTweetsCtrl" >
       <div class="team-header">
         <i class="fa fa-twitter"></i>
-        <a href="http://twitter.com/cdchivasusa" target="blank"> Twitter Feed</a>
+        <a href="http://twitter.com/cdchivasusa" target="blank"> Official Twitter Feed</a>
       </div>
       <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
@@ -74,7 +74,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="ChivasInstagramCtrl" >
       <div class="team-header">
         <i class="fa fa-instagram"></i>
-        <a href="http://instagram.com/chivasusa" target="blank"> Instagram Feed</a>
+        <a href="http://instagram.com/chivasusa" target="blank"> Official Instagram Feed</a>
       </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">
@@ -90,7 +90,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="ChivasYoutubeCtrl" >
       <div class="team-header">
         <i class="fa fa-youtube"></i> 
-        <a href="http://www.youtube.com/user/chivasusa1908" target="blank"> YouTube Feed</a>
+        <a href="http://www.youtube.com/user/chivasusa1908" target="blank"> Official YouTube Feed</a>
       </div>
       <div ng-repeat="video in youtube.videos | orderBy: '-published_at' | limitTo: 18">
         <p class="youtube">

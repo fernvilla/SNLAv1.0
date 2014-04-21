@@ -1,6 +1,6 @@
 <div class="container-fluid" ng-controller="SparksHomeCtrl">
   <div class="row">
-    <div class="col-sm-6 col-md-6">
+    <div class="col-md-12">
       <div class="row sparks-headline">
         <%= image_tag("sparks.gif") %> Los Angeles Sparks
       </div>
@@ -60,7 +60,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="SparksTweetsCtrl" >
       <div class="team-header">
         <i class="fa fa-twitter"></i>
-        <a href="http://twitter.com/la_sparks" target="blank"> Twitter Feed</a>
+        <a href="http://twitter.com/la_sparks" target="blank"> Official Twitter Feed</a>
       </div>
       <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
@@ -72,7 +72,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="SparksInstagramCtrl" >
       <div class="team-header">
         <i class="fa fa-instagram"></i>
-        <a href="http://instagram.com/la_sparks" target="blank"> Instagram Feed</a>
+        <a href="http://instagram.com/la_sparks" target="blank"> Official Instagram Feed</a>
       </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">

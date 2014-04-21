@@ -1,6 +1,6 @@
 <div class="container-fluid" ng-controller="AngelsHomeCtrl">
   <div class="row">
-    <div class="col-sm-6 col-md-6">
+    <div class="col-md-12">
       <div class="row angels-headline">
         <%= image_tag("angels.gif") %> Los Angeles Angels of Anaheim
       </div>
@@ -62,7 +62,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="AngelsTweetsCtrl" >
       <div class="team-header">
         <i class="fa fa-twitter"></i>
-        <a href="http://twitter.com/Angels" target="blank"> Twitter Feed</a>
+        <a href="http://twitter.com/Angels" target="blank"> Official Twitter Feed</a>
       </div>
       <div ng-repeat="tweet in tweets |  filter: searchTweet | limitTo: 10">
         <p class="story">
@@ -74,7 +74,7 @@
     <div class="col-sm-6 col-md-6" ng-controller="AngelsInstagramCtrl" >
       <div class="team-header">
         <i class="fa fa-instagram"></i>
-        <a href="http://instagram.com/Angels" target="blank"> Instagram Feed</a>
+        <a href="http://instagram.com/Angels" target="blank"> Official Instagram Feed</a>
       </div>
       <div ng-repeat="image in instagram | limitTo: 12">
         <p class="instagram">
@@ -129,7 +129,7 @@
     <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="AngelsTumblrCtrl" >
       <div class="team-header">
         <i class="fa fa-tumblr"></i> 
-        <a href="http://angels.tumblr.com" target="blank"> Tumblr Feed</a>
+        <a href="http://angels.tumblr.com" target="blank"> Official Tumblr Feed</a>
       </div>
       <div ng-repeat="image in tumblr.posts | limitTo: 14">
         <p class="tumblr">

@@ -1,6 +1,5 @@
 class LakersController < ApplicationController
   def index
-    
   end
 
   def twitter
@@ -29,6 +28,11 @@ class LakersController < ApplicationController
     end
     client = Tumblr::Client.new(:client => :httpclient)
     render json: client.posts("lakers.tumblr.com", :limit => 14)
+  end
+
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'lakersnationdotcom', :fields => {:published  => (Date.today)})
   end
 
   def api

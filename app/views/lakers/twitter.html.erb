@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="team-header">
+    <i class="fa fa-twitter"></i>
+    <a href="http://twitter.com/lakers" target="blank"> Twitter Feed</a>
+  </div>
+  <div ng-controller="LakersTweetsCtrl">
+    <div ng-repeat="tweet in tweets">
+        <p class="story">
+          <img ng-src="{{tweet.user.profile_image_url}}" alt="">
+          <a href="http://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}" target="blank">{{tweet.user.screen_name}}: {{tweet.text}}</a>
+          <span class="source">({{tweet.created_at | date: 'short'}})</span>
+        </p>
+      </div>
+  </div>
+</div>

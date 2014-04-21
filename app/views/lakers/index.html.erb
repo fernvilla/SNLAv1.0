@@ -1,29 +1,20 @@
-<!-- <div class="container-fluid">
-  <div class="row lakers-headline">
-    Los Angeles Lakers
-  </div>
-</div>
- -->
 <div class="container-fluid" ng-controller="LakersHomeCtrl">
-
   <div class="row">
     <div class="col-sm-6 col-md-6">
       <div class="row lakers-headline">
-        Los Angeles Lakers
+        <%= image_tag("lakers.gif") %> Los Angeles Lakers
       </div>
-      <p>Arena: <a href="http://staplescenter.com">Staples Center</a></p>
-      <p>Official Team Site: <a href="http://lakers.com">Lakers.com</a></p>
-    </div>
-    <div class="col-sm-6 col-md-6" >
-    <!-- <carousel>
-      <slide ng-repeat="slide in havePics | orderBy: '-published' | limitTo:10 " >
-        <a href="{{slide.url}}"><img ng-src="{{slide.image}}" style="height:300px; width:auto; margin: 0 auto; "></a>
-        <div class="carousel-caption">
-          <p>{{slide.title}}</p>
-        </div>
-      </slide>
-    </carousel> -->
-      
+      <div class="team-header-sub">
+        <a href="http://lakers.com">Official Team Site</a> <span class="pipe">|</span>
+        <a href="http://www.nba.com/lakers/roster">Team Roster</a> <span class="pipe">|</span>
+        <a href="http://staplescenter.com">Stadium</a> <span class="pipe">|</span>
+        Social Feeds:
+        <a href="http://instagram.com/lakers"> <i class="fa fa-instagram"></i></a> 
+        <a href="http://twitter.com/lakers"> <i class="fa fa-twitter"></i></a>    
+        <a href="http://lakers.tumblr.com"> <i class="fa fa-tumblr"></i></a>    
+        <a href="http://plus.google.com/+LosAngelesLakers"> <i class="fa fa-google-plus"></i></a>    
+        <a href="http://www.facebook.com/losangeleslakers"> <i class="fa fa-facebook"></i></a>    
+      </div>
     </div>
   </div>
 

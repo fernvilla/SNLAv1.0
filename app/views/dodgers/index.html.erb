@@ -1,10 +1,23 @@
-<div class="container-fluid">
-  <div class="row dodgers-headline">
-    Los Angeles Dodgers
-  </div>
-</div>
-
 <div class="container-fluid" ng-controller="DodgersHomeCtrl">
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <div class="row dodgers-headline">
+        <%= image_tag("dodgers.gif") %> Los Angeles Dodgers
+      </div>
+      <div class="team-header-sub">
+        <a href="http://www.dodgers.com/">Official Team Site</a> <span class="pipe">|</span>
+        <a href="http://www.dodgers.com/roster">Team Roster</a> <span class="pipe">|</span>
+        <a href="http://losangeles.dodgers.mlb.com/la/ballpark/index.jsp">Stadium</a> <span class="pipe">|</span>
+        Social Feeds:
+        <a href="http://instagram.com/dodgers"> <i class="fa fa-instagram"></i></a> 
+        <a href="http://twitter.com/dodgers"> <i class="fa fa-twitter"></i></a>
+        <a href="http://ladodgers.tumblr.com"> <i class="fa fa-tumblr"></i></a>             
+        <a href="http://plus.google.com/+Dodgers"> <i class="fa fa-google-plus"></i></a>    
+        <a href="http://www.facebook.com/dodgers"> <i class="fa fa-facebook"></i></a>    
+        <a href="http://www.pinterest.com/dodgersbaseball/"> <i class="fa fa-pinterest"></i></a>                  
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Official Site</div>

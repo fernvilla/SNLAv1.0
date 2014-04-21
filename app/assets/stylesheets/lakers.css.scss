@@ -8,10 +8,29 @@ $shadow: 1px 1px 1px #000;
 .lakers-headline {
   border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #b3b3b3;
+  padding: 5px;
   color: $base-color;
   font-size: 30px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  img {
+    width: 75px;
+    height: auto;
+  }
+}
+
+.team-header-sub {
+  color: $base-color;
+  a {
+    color: $base-color;
+    &:hover {
+      color: #bababa;
+    }
+  }
+}
+
+.pipe {
+  color: #bababa;
 }
 
 .instagram {
@@ -28,4 +47,8 @@ $shadow: 1px 1px 1px #000;
     width: auto;
     height: 150px;
   }
+}
+
+.fa {
+  margin: 4px;
 }

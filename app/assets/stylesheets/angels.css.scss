@@ -8,8 +8,13 @@ $shadow: 1px 1px 1px #000;
 .angels-headline {
   border-top: 1px solid #b3b3b3;
   border-bottom: 1px solid #b3b3b3;
+  padding: 5px;
   color: $base-color;
   font-size: 30px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  img {
+    width: 75px;
+    height: auto;
+  }
 }

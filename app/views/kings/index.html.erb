@@ -1,10 +1,21 @@
-<div class="container-fluid">
-  <div class="row kings-headline">
-    Los Angeles Kings
-  </div>
-</div>
-
 <div class="container-fluid" ng-controller="KingsHomeCtrl">
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <div class="row kings-headline">
+        <%= image_tag("kings.gif") %> Los Angeles Kings
+      </div>
+      <div class="team-header-sub">
+        <a href="http://www.lakings.com/">Official Team Site</a> <span class="pipe">|</span>
+        <a href="http://kings.nhl.com/club/roster.htm">Team Roster</a> <span class="pipe">|</span>
+        <a href="http://www.staplescenter.com">Stadium</a> <span class="pipe">|</span>
+        Social Feeds:
+        <a href="http://instagram.com/lakings"> <i class="fa fa-instagram"></i></a> 
+        <a href="http://twitter.com/lakings"> <i class="fa fa-twitter"></i></a>   
+        <a href="http://www.facebook.com/lakings"> <i class="fa fa-facebook"></i></a>                                      
+        <a href="http://www.youtube.com/user/kingsvision"> <i class="fa fa-youtube"></i></a>                                  
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Official Site</div>

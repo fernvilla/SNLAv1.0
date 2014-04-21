@@ -42,17 +42,18 @@ body {
 .home-image {
   width: 100%;
   height: auto;
-  box-shadow: $shadow;
-  border: 1px outset #bababa;
+  box-shadow: 3px 3px 5px #000;
+  border: 2px solid #bababa;
 }
 
 .notice {
+  margin-top: 15px;
   color: green;
   text-align: center;
 }
 
 .alert {
-  margin: 0 auto;
+  margin-top: 15px;
   color: red;
   text-align: center;
 }
@@ -226,16 +227,6 @@ a {
   color: #575757;
   padding-top: 5px;
 }
-
-/*.tweet {
-  font-size: 13px;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 15px 20px ;
-  background-color: #e7e7e7;
-  box-shadow: 1px 1px 1px #000;
-}*/
 
 @media (max-width: 400px) {
   .container-fluid {

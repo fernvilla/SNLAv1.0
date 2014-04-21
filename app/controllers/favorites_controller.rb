@@ -1,19 +1,18 @@
 class FavoritesController < ApplicationController
   def index
-    if current_user
-
-    else
+    if !current_user
       redirect_to new_user_session_path
       flash[:alert] = "Must be logged in to view this page"
+    else
+      @favorites = current_user.favorites
     end
   end
 
   def api
     if current_user
-      render json: User.where(email: current_user.email) 
+      render json: current_user.favorites 
     else
       redirect_to new_user_session_path
-      flash[:notice] = "Must be logged in to view this page"
     end
   end
 end

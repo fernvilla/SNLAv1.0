@@ -28,7 +28,7 @@ class DodgersController < ApplicationController
       config.consumer_secret = ENV["TUMBLR_SECRET"]
     end
     client = Tumblr::Client.new(:client => :httpclient)
-    render json: client.posts("ladodgers.tumblr.com", :limit => 9)
+    render json: client.posts("ladodgers.tumblr.com", :limit => 10)
   end
 
   def api

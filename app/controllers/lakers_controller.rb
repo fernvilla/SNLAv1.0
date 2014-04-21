@@ -34,7 +34,6 @@ class LakersController < ApplicationController
   def youtube
     client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
     render json: client.videos_by(:title => {:include => 'lakers'}, :user => 'nba')
-
   end
 
   def api

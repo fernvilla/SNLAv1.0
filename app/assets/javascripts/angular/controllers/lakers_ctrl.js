@@ -2,6 +2,15 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
   $http.get('/api/lakers.json').then(
     function(stories){
       $scope.stories = stories.data;
+
+      for (var i = 0; i < stories.data.length; i++) {
+        if (stories.data[i].published) { 
+          var clock = new Date(); 
+          console.log(stories.data[i].published);
+          console.log(clock);
+          break;
+        }
+      }
     }
   );
 

@@ -17,6 +17,10 @@ class LakersImporter
     nba_power_rankings = Feedjira::Feed.fetch_and_parse("http://www.nba.com/powerrankings/rss.xml")
     laker_liker = Feedjira::Feed.fetch_and_parse("http://www.nba.com/powerrankings/rss.xml")
     triple_threat = Feedjira::Feed.fetch_and_parse("http://www.nbclosangeles.com/blogs/triple-threat/?rss=y")
+    land_o_lakers = Feedjira::Feed.fetch_and_parse("http://landolakers.com/feed/")
+    real_gm = Feedjira::Feed.fetch_and_parse("http://basketball.realgm.com/rss/wiretap/26/13.xml")
+    rant_sports = Feedjira::Feed.fetch_and_parse("http://www.rantsports.com/nba/teams/los-angeles-lakers/feed/")
+    ny_times = Feedjira::Feed.fetch_and_parse("http://topics.nytimes.com/top/news/sports/probasketball/nationalbasketballassociation/losangeleslakers/?offset=10&s=newest&rss=1")
 
     inside_the_lakers.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
@@ -196,6 +200,58 @@ class LakersImporter
         url:        entry.url,
         image:      entry.image,
         source:     "Triple Threat"
+      )
+    end
+
+    land_o_lakers.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        # image:      entry.image,
+        source:     "Land O' Lakers"
+      )
+    end
+
+    real_gm.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "Real GM"
+      )
+    end
+
+    rant_sports.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "Rant Sports"
+      )
+    end
+
+    ny_times.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "NY Times"
       )
     end
   end

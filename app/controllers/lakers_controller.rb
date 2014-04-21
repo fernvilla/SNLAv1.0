@@ -118,4 +118,20 @@ class LakersController < ApplicationController
   def triple_threat
     render json: Laker.where(source: "Triple Threat")
   end
+
+  def land_o_lakers
+    render json: Laker.where(source: "Land O' Lakers")
+  end
+
+  def real_gm
+    render json: Laker.where(source: "Real GM")
+  end
+
+  def rant_sports
+    render json: Laker.where(source: "Rant Sports")
+  end
+
+  def ny_times
+    render json: Laker.where(source: "NY Times")
+  end
 end

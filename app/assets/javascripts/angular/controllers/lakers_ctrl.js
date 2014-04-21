@@ -130,6 +130,26 @@ App.controller('LakersHomeCtrl', ['$scope', '$http', function($scope, $http) {
       $scope.triple_threat = triple_threat.data;
     }
   );
+  $http.get('/api/lakers/land_o_lakers.json').then(
+    function(land_o_lakers){
+      $scope.land_o_lakers = land_o_lakers.data;
+    }
+  );
+  $http.get('/api/lakers/real_gm.json').then(
+    function(real_gm){
+      $scope.real_gm = real_gm.data;
+    }
+  );
+  $http.get('/api/lakers/rant_sports.json').then(
+    function(rant_sports){
+      $scope.rant_sports = rant_sports.data;
+    }
+  );
+  $http.get('/api/lakers/ny_times.json').then(
+    function(ny_times){
+      $scope.ny_times = ny_times.data;
+    }
+  );
 }]);
 
 App.controller('LakersTweetsCtrl', ['$scope', '$http', function($scope, $http) {

@@ -240,7 +240,7 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">LA Sports Hub</div>
-      <div ng-repeat="story in la_sports_hub | orderBy: '-published' | limitTo: 13">
+      <div ng-repeat="story in la_sports_hub | orderBy: '-published' | limitTo: 11">
         <div class="story">
           <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>
@@ -250,6 +250,45 @@
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Triple Threat</div>
       <div ng-repeat="story in triple_threat | orderBy: '-published' | limitTo: 13">
+        <div class="story">
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Land O' Lakers</div>
+      <div ng-repeat="story in land_o_lakers | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Real GM</div>
+      <div ng-repeat="story in real_gm | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">Rant Sports</div>
+      <div ng-repeat="story in rant_sports | orderBy: '-published' | limitTo: 10">
+        <div class="story">
+          <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
+          <span class="source">({{story.published | date: 'short'}})</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="team-header">NY Times</div>
+      <div ng-repeat="story in ny_times | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" target="blank" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter">{{story.title}}</a>
           <span class="source">({{story.published | date: 'short'}})</span>

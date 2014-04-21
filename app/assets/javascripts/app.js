@@ -1,1 +1,1 @@
-App = angular.module('SportsNewsLA', ['ngResource', 'ui.bootstrap']);
+App = angular.module('SportsNewsLA', ['ngResource', 'ui.bootstrap', 'ngAnimate']);

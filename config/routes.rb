@@ -185,6 +185,10 @@ SportsNewsLA::Application.routes.draw do
     get "/lakers/fansided(.:format)" => "lakers#fansided"
     get "/lakers/hoops_hype(.:format)" => "lakers#hoops_hype"
     get "/lakers/triple_threat(.:format)" => "lakers#triple_threat"
+    get "/lakers/land_o_lakers(.:format)" => "lakers#land_o_lakers"
+    get "/lakers/real_gm(.:format)" => "lakers#real_gm"
+    get "/lakers/rant_sports(.:format)" => "lakers#rant_sports"
+    get "/lakers/ny_times(.:format)" => "lakers#ny_times"
 
     # Routes to Galaxy blogs
     get "/galaxy/lag_confidential(.:format)" => "galaxies#lag_confidential"

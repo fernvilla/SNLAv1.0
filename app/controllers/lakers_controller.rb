@@ -31,11 +31,6 @@ class LakersController < ApplicationController
     render json: client.posts("lakers.tumblr.com", :limit => 14)
   end
 
-  def youtube
-    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
-    render json: client.videos_by(:title => {:include => 'lakers'}, :user => 'nba')
-  end
-
   def api
     render json: Laker.all
   end

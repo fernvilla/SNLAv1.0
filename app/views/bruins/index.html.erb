@@ -160,6 +160,22 @@
     </div>
   </div>
 
+  <!-- YouTube -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12" ng-controller="BruinsYoutubeCtrl" >
+      <div class="team-header">
+        <i class="fa fa-youtube"></i> 
+        <a href="http://www.youtube.com/channel/UCm3-NocWw8YDQ6lfOb78ehA" target="blank"> YouTube Feed</a>
+      </div>
+      <div ng-repeat="video in youtube.videos | limitTo: 18">
+        <p class="youtube">
+          <a href="{{video.player_url}}" target="blank"><img ng-src="{{video.thumbnails[0].url}}" popover="{{video.title | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End YouTube -->
+
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3">
       <div class="team-header">Punting Is Winning</div>

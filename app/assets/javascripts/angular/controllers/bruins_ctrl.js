@@ -90,3 +90,11 @@ App.controller('BruinsInstagramCtrl', ['$scope', '$http', function($scope, $http
     }
   );
 }]);
+
+App.controller('BruinsYoutubeCtrl', ['$scope', '$http', function($scope, $http) {
+  $http.get('/api/bruins/youtube.json').then(
+    function(youtube) {
+      $scope.youtube = youtube.data;
+    }
+  );
+}]);

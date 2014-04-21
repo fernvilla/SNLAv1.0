@@ -69,6 +69,7 @@ SportsNewsLA::Application.routes.draw do
     get "/ducks/tumblr(.:format)" => "ducks#tumblr"
 
     # Routes to youtube feed
+    get "/bruins/youtube(.:format)" => "bruins#youtube"
  
     # Routes to stories from official team sites
     get "/lakers/official(.:format)" => "lakers#official"

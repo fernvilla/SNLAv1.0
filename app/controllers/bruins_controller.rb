@@ -22,6 +22,11 @@ class BruinsController < ApplicationController
     render json: Instagram.user_recent_media(43277415)
   end
 
+  def youtube
+    client = YouTubeIt::Client.new(:dev_key => ENV["YOUTUBE_KEY"])
+    render json: client.videos_by(:user => 'UCm3-NocWw8YDQ6lfOb78ehA')
+  end
+
   def api
     render json: Bruin.all
   end

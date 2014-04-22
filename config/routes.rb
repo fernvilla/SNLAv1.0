@@ -3,7 +3,7 @@ SportsNewsLA::Application.routes.draw do
 
   devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
   
-  get "favorites" => "favorites#index"
+  resources :favorites
   get "api/favorites" => "favorites#api"
 
   # Team index page routes

@@ -3,19 +3,19 @@ App.controller('LakersCtrl', ['$scope', '$http', function($scope, $http) {
     function(stories){
       $scope.stories = stories.data;
 
-      for (var i = 0; i < stories.data.length; i++) {
-        if (stories.data[i].published) { 
-          var clock = new Date(); 
-          console.log(stories.data[i].published);
-          console.log(clock);
-          break;
-        }
-      }
+      // for (var i = 0; i < stories.data.length; i++) {
+      //   if (stories.data[i].published) { 
+      //     var clock = new Date(); 
+      //     console.log(stories.data[i].published);
+      //     console.log(clock);
+      //     break;
+      //   }
+      // }
     }
   );
 
   $scope.addFavorite = function(story) {
-    console.log(story);
+    var favorite = new Favorite ({title: $scope.title})
   }
 }]);
 

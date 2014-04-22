@@ -5,8 +5,9 @@
         <h1>Sports News Los Angeles</h1>
         <br>
         <p>Stay Up-to-Date With All the Latest L.A. Sports News.</p>
-        <p>Over 150 News and Social Media Feeds Automatically Updated.</p>
-        <p>Log In and Save Stories to Your List of Favorites.</p>
+        <p>Over 150 News Feeds Automatically Updated Throughout the Day.</p>
+        <p>Team Social Media Feeds (Instagram, Twitter, Tumblr, YouTube).</p>
+        <!-- <p>Log In and Save Stories to Your List of Favorites.</p> -->
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6">
         <%= image_tag("home1.png", :class => "home-image") %>
@@ -29,9 +30,16 @@
         <div class="story">
           <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a><br>
           <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
-         <!--  
-          <i class="fa fa-star-o favorite" popover="Add to favorites" popover-placement="bottom" popover-trigger="mouseenter" ng-click="addFavorite(story)"></i>
-           -->
+          
+          <i class="fa fa-star-o fa-lg favorite" popover="Add to favorites" popover-placement="bottom" popover-trigger="mouseenter" ng-click="addFavorite(story)"></i>
+          
+          <%= link_to 'Tag it!', { :controller => "favorites", 
+                                   :action => "create", 
+                                   :user_id => current_user.id, 
+                                   :title => 'story.title',
+                                   } ,
+                                   :method => "post" %>
+          
         </div>
       </div>
     </div>

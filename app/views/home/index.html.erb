@@ -29,17 +29,7 @@
       <div ng-repeat="story in stories | orderBy: '-published' | limitTo: 10">
         <div class="story">
           <a href="{{story.url}}" popover="{{story.summary | limitTo: 150}}..." popover-placement="bottom" popover-trigger="mouseenter" target="blank">{{story.title}}</a><br>
-          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;
-          
-          <i class="fa fa-star-o fa-lg favorite" popover="Add to favorites" popover-placement="bottom" popover-trigger="mouseenter" ng-click="addFavorite(story)"></i>
-          
-          <%= link_to 'Tag it!', { :controller => "favorites", 
-                                   :action => "create", 
-                                   :user_id => current_user.id, 
-                                   :title => 'story.title',
-                                   } ,
-                                   :method => "post" %>
-          
+          <span class="source">({{story.published | date: 'short'}}, Source: {{story.source}})</span>&nbsp;    
         </div>
       </div>
     </div>

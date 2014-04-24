@@ -145,19 +145,19 @@ class EspnImporter
       )
     end
 
-    bruins_feed_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      title = entry.title.gsub(/#x26;/, '')
-      Bruin.where(title: entry.title).first_or_create(
-        title:      title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
-    end
+    # bruins_feed_two.entries.each do |entry|
+    #   summary = entry.summary.gsub(/<[^>]*>/, '')
+    #   title = entry.title.gsub(/#x26;/, '')
+    #   Bruin.where(title: entry.title).first_or_create(
+    #     title:      title,
+    #     author:     entry.author,
+    #     summary:    summary,
+    #     published:  entry.published,
+    #     url:        entry.url,
+    #     image:      entry.image,
+    #     source:     source
+    #   )
+    # end
 
     trojans_feed.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')

@@ -12,7 +12,7 @@ class EspnImporter
     kings_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angeleskings")
     kings_feed_two = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/los-angeles-kings/")
     bruins_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesucla")
-    bruins_feed_two = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/ucla-bruins/")
+    # bruins_feed_two = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/ucla-bruins/")
     trojans_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesusc")
     trojans_feed_two = Feedjira::Feed.fetch_and_parse("http://search.espn.go.com/rss/usc-trojans/")
     angels_feed = Feedjira::Feed.fetch_and_parse("http://espn.go.com/blog/feed?blog=los-angelesangels")

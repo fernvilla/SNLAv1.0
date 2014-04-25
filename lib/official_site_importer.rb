@@ -31,7 +31,7 @@ class OfficialSiteImporter
 
     lakers_feed_two.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
+      Laker.where(title: entry.title).first_or_create(
         title:      entry.title,
         author:     entry.author,
         summary:    summary,

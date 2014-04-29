@@ -73,19 +73,6 @@ class LakersImporter
       )
     end
 
-    laker_nation.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Laker Nation"
-      )
-    end
-
     lakerholicz.entries.each do |entry|
       summary = entry.summary.gsub(/<[^>]*>/, '')
       Laker.where(url: entry.url).first_or_create(
@@ -252,6 +239,19 @@ class LakersImporter
         url:        entry.url,
         image:      entry.image,
         source:     "NY Times"
+      )
+    end
+
+    laker_nation.entries.each do |entry|
+      summary = entry.summary.gsub(/<[^>]*>/, '')
+      Laker.where(url: entry.url).first_or_create(
+        title:      entry.title,
+        author:     entry.author,
+        summary:    summary,
+        published:  entry.published,
+        url:        entry.url,
+        image:      entry.image,
+        source:     "Laker Nation"
       )
     end
   end

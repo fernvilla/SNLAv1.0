@@ -27,11 +27,11 @@ namespace :news_sync do
     BruinsImporter.import_blogs
     TrojansImporter.import_blogs
     BleacherReportImporter.import_bleacher_report
-    LakersImporter.import_blogs
     LASportsHubImporter.import_la_sports_hub
     FoxSportsImporter.import_fox_sports
     DailyNewsImporter.import_daily_news
     LATimesImporter.import_la_times
+    LakersImporter.import_blogs
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

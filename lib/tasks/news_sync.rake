@@ -19,7 +19,6 @@ namespace :news_sync do
   task :news => :environment do
     EspnImporter.import_espn
     OfficialSiteImporter.import_official_news
-    LATimesImporter.import_la_times
     OCRegisterImporter.import_oc_register
     CBSImporter.import_cbs
     GalaxyImporter.import_blogs
@@ -32,6 +31,7 @@ namespace :news_sync do
     LASportsHubImporter.import_la_sports_hub
     FoxSportsImporter.import_fox_sports
     DailyNewsImporter.import_daily_news
+    LATimesImporter.import_la_times
 
     puts "There are now #{Laker.count} Lakers stories."
     puts "There are now #{Dodger.count} Dodgers stories."

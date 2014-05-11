@@ -17,172 +17,198 @@ class FoxSportsImporter
     trojans_women_feed = Feedjira::Feed.fetch_and_parse("http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=1298")
     sparks_feed = Feedjira::Feed.fetch_and_parse("http://feeds.foxsports.com/feedout/syndicatedContent?categoryId=358")
 
-    lakers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? lakers_feed.entries
+      lakers_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    clippers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Clipper.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? clippers_feed.entries
+      clippers_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Clipper.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    dodgers_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Dodger.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? dodgers_feed.entries
+      dodgers_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Dodger.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    angels_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Angel.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? angels_feed.entries
+      angels_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Angel.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    ducks_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Duck.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? ducks_feed.entries
+      ducks_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Duck.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    kings_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      King.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? kings_feed.entries
+      kings_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        King.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    bruins_football_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Bruin.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? bruins_football_feed.entries
+      bruins_football_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Bruin.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    bruins_basketball_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Bruin.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? brui.entries
+      bruins_basketball_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Bruin.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    bruins_women_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Bruin.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? bruins_women_feed.entries
+      bruins_women_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Bruin.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    trojans_football_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Trojan.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? trojans_football_feed.entries
+      trojans_football_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Trojan.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    trojans_basketball_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Trojan.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? trojans_basketball_feed.entries
+      trojans_basketball_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Trojan.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    trojans_women_feed.entries.each do |entry|
-      Trojan.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    entry.summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? trojans_women_feed.entries
+      trojans_women_feed.entries.each do |entry|
+        Trojan.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    entry.summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
 
-    sparks_feed.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Spark.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     source
-      )
+    if defined? sparks_feed.entries
+      sparks_feed.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Spark.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     source
+        )
+      end
     end
   end
 end

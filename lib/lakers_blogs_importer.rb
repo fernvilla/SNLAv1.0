@@ -22,237 +22,273 @@ class LakersImporter
     rant_sports = Feedjira::Feed.fetch_and_parse("http://www.rantsports.com/nba/teams/los-angeles-lakers/feed/")
     ny_times = Feedjira::Feed.fetch_and_parse("http://topics.nytimes.com/top/news/sports/probasketball/nationalbasketballassociation/losangeleslakers/?offset=10&s=newest&rss=1")
 
-    inside_the_lakers.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Inside the Lakers"
-      )
+    if defined? chivas_feed.entries
+      inside_the_lakers.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Inside the Lakers"
+        )
+      end
     end
 
-    lakers_nation.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lakers Nation"
-      )
+    if defined? lakers_nation.entries
+      lakers_nation.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lakers Nation"
+        )
+      end
     end
 
-    forum_blue_and_gold.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Forum Blue and Gold"
-      )
+    if defined? forum_blue_and_gold.entries
+      forum_blue_and_gold.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Forum Blue and Gold"
+        )
+      end
     end
 
-    silver_screen_and_roll.entries.each do |entry|
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    entry.summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Silver Screen and Roll"
-      )
+    if defined? silver_screen_and_roll.entries
+      silver_screen_and_roll.entries.each do |entry|
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    entry.summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Silver Screen and Roll"
+        )
+      end
     end
 
-    lakerholicz.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lakerholicz"
-      )
+    if defined? lakerholicz.entries
+      lakerholicz.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lakerholicz"
+        )
+      end
     end
 
-    lake_show_life.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lake Show Life"
-      )
+    if defined? lake_show_life.entries
+      lake_show_life.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lake Show Life"
+        )
+      end
     end
 
-    lake_show_life_two.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lake Show Life"
-      )
+    if defined? lake_show_life.entries
+      lake_show_life_two.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lake Show Life"
+        )
+      end
     end
 
-    lake_show_life_three.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lake Show Life"
-      )
+    if defined? lake_show_life_three.entries
+      lake_show_life_three.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lake Show Life"
+        )
+      end
     end
 
-    lake_show_life_four.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Lake Show Life"
-      )
+    if defined? lake_show_life_four.entries
+      lake_show_life_four.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Lake Show Life"
+        )
+      end
     end
 
-    fansided.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Fansided"
-      )
+    if defined? fansided.entries
+      fansided.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Fansided"
+        )
+      end
     end
 
+    if defined? chivas_feed.entries
       hoops_hype.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(title: entry.title).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Hoops Hype"
-      )
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(title: entry.title).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Hoops Hype"
+        )
+      end
     end
 
-     nba_power_rankings.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "NBA.com"
-      )
+    if defined? nba_power_rankings.entries
+       nba_power_rankings.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "NBA.com"
+        )
+      end
     end
 
-    triple_threat.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Triple Threat"
-      )
+    if defined? triple_threat.entries
+      triple_threat.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Triple Threat"
+        )
+      end
     end
 
-    land_o_lakers.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        # image:      entry.image,
-        source:     "Land O' Lakers"
-      )
+    if defined? land_o_lakers.entries
+      land_o_lakers.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          # image:      entry.image,
+          source:     "Land O' Lakers"
+        )
+      end
     end
 
-    real_gm.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Real GM"
-      )
+    if defined? real_gm.entries
+      real_gm.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Real GM"
+        )
+      end
     end
 
-    rant_sports.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Rant Sports"
-      )
+    if defined? rant_sports.entries
+      rant_sports.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Rant Sports"
+        )
+      end
     end
 
-    ny_times.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "NY Times"
-      )
+    if defined? ny_times.entries
+      ny_times.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "NY Times"
+        )
+      end
     end
 
-    laker_nation.entries.each do |entry|
-      summary = entry.summary.gsub(/<[^>]*>/, '')
-      Laker.where(url: entry.url).first_or_create(
-        title:      entry.title,
-        author:     entry.author,
-        summary:    summary,
-        published:  entry.published,
-        url:        entry.url,
-        image:      entry.image,
-        source:     "Laker Nation"
-      )
+    if defined? laker_nation.entries
+      laker_nation.entries.each do |entry|
+        summary = entry.summary.gsub(/<[^>]*>/, '')
+        Laker.where(url: entry.url).first_or_create(
+          title:      entry.title,
+          author:     entry.author,
+          summary:    summary,
+          published:  entry.published,
+          url:        entry.url,
+          image:      entry.image,
+          source:     "Laker Nation"
+        )
+      end
     end
   end
 end

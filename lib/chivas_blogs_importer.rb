@@ -4,6 +4,7 @@ class ChivasImporter
   def self.import_blogs
     goat_parade = Feedjira::Feed.fetch_and_parse("http://www.thegoatparade.com/rss/current")
 
+  if defined? goat_parade.entries
     goat_parade.entries.each do |entry|
       Chiva.where(url: entry.url).first_or_create(
         title:      entry.title,
@@ -14,6 +15,7 @@ class ChivasImporter
         image:      entry.image,
         source:     "The Goat Parade"
       )
+      end
     end
   end
 end

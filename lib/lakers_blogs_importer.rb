@@ -22,7 +22,8 @@ class LakersImporter
     rant_sports = Feedjira::Feed.fetch_and_parse("http://www.rantsports.com/nba/teams/los-angeles-lakers/feed/")
     ny_times = Feedjira::Feed.fetch_and_parse("http://topics.nytimes.com/top/news/sports/probasketball/nationalbasketballassociation/losangeleslakers/?offset=10&s=newest&rss=1")
 
-    if defined? chivas_feed.entries
+
+    if defined? inside_the_lakers.entries
       inside_the_lakers.entries.each do |entry|
         summary = entry.summary.gsub(/<[^>]*>/, '')
         Laker.where(url: entry.url).first_or_create(

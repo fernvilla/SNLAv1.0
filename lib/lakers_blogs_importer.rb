@@ -112,7 +112,7 @@ class LakersImporter
       end
     end
 
-    if defined? lake_show_life.entries
+    if defined? lake_show_life_two.entries
       lake_show_life_two.entries.each do |entry|
         summary = entry.summary.gsub(/<[^>]*>/, '')
         Laker.where(url: entry.url).first_or_create(
@@ -172,7 +172,7 @@ class LakersImporter
       end
     end
 
-    if defined? chivas_feed.entries
+    if defined? hoops_hype.entries
       hoops_hype.entries.each do |entry|
         summary = entry.summary.gsub(/<[^>]*>/, '')
         Laker.where(title: entry.title).first_or_create(
